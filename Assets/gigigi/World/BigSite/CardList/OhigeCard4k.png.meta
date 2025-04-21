@@ -1,0 +1,2943 @@
+fileFormatVersion: 2
+guid: 9ebc30965aad05247bd3ec26ed51267f
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: OhigeCard4k_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3640.889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99e116d749e29ec439716c59da0f1a1e
+      internalID: -1724330341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_1
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 3640.889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96da94ba277cfbf4597499f884063038
+      internalID: 1959079902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_2
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 3640.889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd846afb5b7385a43a78576d1848fe29
+      internalID: 167519538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_3
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 3640.889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8ac2a36d638c394f9415607a2d192a6
+      internalID: 912829866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_4
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 3640.889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5119d697bc080ce4f96dc7753d3b1b57
+      internalID: -1686983174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_5
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 3640.889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6f7a6c33efd0c246baa835f27355879
+      internalID: -1930128842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_6
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 3640.889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0540ec0175ac854a951112d8b9bd99f
+      internalID: -1632879919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_7
+      rect:
+        serializedVersion: 2
+        x: 2044
+        y: 3640.889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aa078b8807319d4abf734a965db984f
+      internalID: -1230093358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_8
+      rect:
+        serializedVersion: 2
+        x: 2336
+        y: 3640.889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2626990d42acba448a40b9ec10d4488
+      internalID: -206667412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_9
+      rect:
+        serializedVersion: 2
+        x: 2628
+        y: 3640.889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4405691b568926d42a3d353259752d04
+      internalID: 837425382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_10
+      rect:
+        serializedVersion: 2
+        x: 2920
+        y: 3640.889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e572f00fe8fc65c498938ff1acee21fb
+      internalID: -574342937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_11
+      rect:
+        serializedVersion: 2
+        x: 3212
+        y: 3640.889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73c659cb2914ec8438c22546ab21aa11
+      internalID: 308230132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_12
+      rect:
+        serializedVersion: 2
+        x: 3504
+        y: 3640.889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 657eb94bc23b7f440912693a720ddcbf
+      internalID: 1252501941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_13
+      rect:
+        serializedVersion: 2
+        x: 3796
+        y: 3640.889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e25d063675aec04a85a83411f6954ed
+      internalID: 75058200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3185.889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c866d90889b65a5458cb337d2d657598
+      internalID: -527173329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_15
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 3185.889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc70a3311e26437499d27e1783ef0d4e
+      internalID: -2037953729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_16
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 3185.889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb8c1af4f9f0347448a8b098c031f6ed
+      internalID: 639714523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_17
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 3185.889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8ad1cb162d9ab447a654a9d88586098
+      internalID: -1364777598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_18
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 3185.889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2881c52916fc8d249a5e02492c1049c7
+      internalID: 4026204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_19
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 3185.889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26e4968177768f144ba2695c3b13c1ee
+      internalID: -2071463094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_20
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 3185.889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 177659f20e89a244ba6babfd0e51a5b6
+      internalID: 712059914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_21
+      rect:
+        serializedVersion: 2
+        x: 2044
+        y: 3185.889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99b58851f21ef1a4fae04ac0f312d930
+      internalID: -658922026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_22
+      rect:
+        serializedVersion: 2
+        x: 2336
+        y: 3185.889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7c3f39ecb7070e48a01a9286db02feb
+      internalID: -695977863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_23
+      rect:
+        serializedVersion: 2
+        x: 2628
+        y: 3185.889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19c57044ec2421d4c8ef30c3634fd1df
+      internalID: -621577719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_24
+      rect:
+        serializedVersion: 2
+        x: 2920
+        y: 3185.889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a532bd7bfeb2514c8ab6188b11caca3
+      internalID: -1059450440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_25
+      rect:
+        serializedVersion: 2
+        x: 3212
+        y: 3185.889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a58975b8ae6bf14b83557762046241d
+      internalID: 1451736493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_26
+      rect:
+        serializedVersion: 2
+        x: 3504
+        y: 3185.889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f6dce79a21beb84aad964fb35766311
+      internalID: 2032958835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_27
+      rect:
+        serializedVersion: 2
+        x: 3796
+        y: 3185.889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9852ab170dc1d6b4881d73cdb991aa44
+      internalID: 1970780750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2730.889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69f2c06a72716cd409f6a1546f745a0a
+      internalID: -768585337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_29
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 2730.889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a93338b5190d9ab45b44c637ac4ec857
+      internalID: -1931497504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_30
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 2730.889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80a6fcc73f9b53f4486acfb9e890f9d5
+      internalID: 90350865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_31
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 2730.889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4acd27989a87b1b41aa5b10a9c69bdc8
+      internalID: 1629937233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_32
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 2730.889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 778084595d475e34e978b90d896e9915
+      internalID: 1961710816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_33
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 2730.889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 087fd9dbd3e71e540926225e6bbe96a3
+      internalID: -1742774845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_34
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 2730.889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a1510995392ab54c90ca0376986c5c7
+      internalID: -1371007678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_35
+      rect:
+        serializedVersion: 2
+        x: 2044
+        y: 2730.889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8188577b6720c545b5d6617f9ec002a
+      internalID: 834068099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_36
+      rect:
+        serializedVersion: 2
+        x: 2336
+        y: 2730.889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b34069d6ef343994eb3108dc3a6a7a7a
+      internalID: 874104372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_37
+      rect:
+        serializedVersion: 2
+        x: 2628
+        y: 2730.889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a9305107836c91429f3de02b87c7e7e
+      internalID: 640513543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_38
+      rect:
+        serializedVersion: 2
+        x: 2920
+        y: 2730.889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ca6ac52dc010ba45a5e41c390810b2c
+      internalID: 1941314770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_39
+      rect:
+        serializedVersion: 2
+        x: 3212
+        y: 2730.889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0eb3785d98499a4e9054a9942d6cc35
+      internalID: 6632077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_40
+      rect:
+        serializedVersion: 2
+        x: 3504
+        y: 2730.889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9cced9d124e1934dafb22c5f9652779
+      internalID: -1654182739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_41
+      rect:
+        serializedVersion: 2
+        x: 3796
+        y: 2730.889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d716656477a6da41be72a871091aa68
+      internalID: -74118561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2275.889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f413bf3bd12e614e9d4f5fb524ab21b
+      internalID: -1362483816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_43
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 2275.889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a987d3138e69e847a98cc7ed9a11078
+      internalID: 1931390077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_44
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 2275.889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f996f3525e36b1a4099d61cf77502617
+      internalID: 1763500257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_45
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 2275.889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71b93e94768b37f41b45d02dfa363002
+      internalID: 215728678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_46
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 2275.889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e07f4000534c0644b3f0bb961a071d0
+      internalID: -249225881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_47
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 2275.889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 569854bf4b736a84aa706047c32b7950
+      internalID: 587260483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_48
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 2275.889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e77df2614bf263641b21f4ceb1b3bf8a
+      internalID: 1466487492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_49
+      rect:
+        serializedVersion: 2
+        x: 2044
+        y: 2275.889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ec91ecb8f17add4ca5bb443598c1fbc
+      internalID: 865562112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_50
+      rect:
+        serializedVersion: 2
+        x: 2336
+        y: 2275.889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51a1b00ef3290fa429f3f4cc1c6fad28
+      internalID: -1223858763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_51
+      rect:
+        serializedVersion: 2
+        x: 2628
+        y: 2275.889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d13ce3ee29ba9e740a61a866b5a4e9f5
+      internalID: 80094168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_52
+      rect:
+        serializedVersion: 2
+        x: 2920
+        y: 2275.889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10ca93d9c1f925046910b7102dc26794
+      internalID: -2015887459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_53
+      rect:
+        serializedVersion: 2
+        x: 3212
+        y: 2275.889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecbb63283f60015489a10f8a05071710
+      internalID: -1966494507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_54
+      rect:
+        serializedVersion: 2
+        x: 3504
+        y: 2275.889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee4612f98b867ea4ea9ce25369f9eeda
+      internalID: -1464692082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_55
+      rect:
+        serializedVersion: 2
+        x: 3796
+        y: 2275.889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 832bebe0dadcddd4f9c0796a6841648d
+      internalID: 63877008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1820.8889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fd4803b990ac744db4f6307066717d6
+      internalID: 1268318645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_57
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 1820.8889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bc9ecf67d515304ba21905dcd235dcf
+      internalID: -754261702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_58
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 1820.8889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6dc4bff9a0a63443b6a7794c095991d
+      internalID: 224236406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_59
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 1820.8889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a329820de115bf747b453ce563d74196
+      internalID: 686220921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_60
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 1820.8889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd87752aec1e1d04d8c9c19fd6b037ec
+      internalID: -1099422106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_61
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 1820.8889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc26e2d752ff1e64aa5e0874fb896e01
+      internalID: 1452253387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_62
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 1820.8889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ba495ca8329db945a20dcae6be42582
+      internalID: 535778232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_63
+      rect:
+        serializedVersion: 2
+        x: 2044
+        y: 1820.8889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a033fe9149b6b9d41b5b4953fab6e7a5
+      internalID: -181969204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_64
+      rect:
+        serializedVersion: 2
+        x: 2336
+        y: 1820.8889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 497ed7118cb177c489e33b26d19b9b9a
+      internalID: 292754025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_65
+      rect:
+        serializedVersion: 2
+        x: 2628
+        y: 1820.8889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e1350eefd8cc5a478730ec3412116cc
+      internalID: -579828420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_66
+      rect:
+        serializedVersion: 2
+        x: 2920
+        y: 1820.8889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 975dbdf91eecc71498ef20778a55270c
+      internalID: 413791473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_67
+      rect:
+        serializedVersion: 2
+        x: 3212
+        y: 1820.8889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 949f8f2ec45933e418adc959b4aaee11
+      internalID: 663037343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_68
+      rect:
+        serializedVersion: 2
+        x: 3504
+        y: 1820.8889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b5e71be1288a604a87b89d401138e50
+      internalID: 1785608024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_69
+      rect:
+        serializedVersion: 2
+        x: 3796
+        y: 1820.8889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c50d3a3fd7ced04eb83c86fa021c283
+      internalID: -132809198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1365.8889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c528bc292c6877c48985e3561922e289
+      internalID: -74502361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_71
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 1365.8889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9727eaffbc2f82a4ead4cf7824e3eb18
+      internalID: 1436831898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_72
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 1365.8889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dd58dfad9dc65d4cb78b7394402b4e2
+      internalID: 983772065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_73
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 1365.8889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af4b51d05eb6ad54986e1d111e10be27
+      internalID: -745813477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_74
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 1365.8889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14fc42e702136d043bdc30158e0ccd28
+      internalID: 63609114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_75
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 1365.8889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb250e4e9dbbce440a40d993b60ff191
+      internalID: 340524701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_76
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 1365.8889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f823715b93866146be829ce6cddc86c
+      internalID: -731496211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_77
+      rect:
+        serializedVersion: 2
+        x: 2044
+        y: 1365.8889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 848a2fd16a60a564fa3f66cb681ed1dd
+      internalID: 1180414531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_78
+      rect:
+        serializedVersion: 2
+        x: 2336
+        y: 1365.8889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4c5c180ce5917d4e914ed9f23a22966
+      internalID: -1585441493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_79
+      rect:
+        serializedVersion: 2
+        x: 2628
+        y: 1365.8889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e3bf4fabda5c634d9362571cea295b4
+      internalID: -740613617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_80
+      rect:
+        serializedVersion: 2
+        x: 2920
+        y: 1365.8889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5e53f0d3be2aaa4bac25916c867ff47
+      internalID: -617459673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_81
+      rect:
+        serializedVersion: 2
+        x: 3212
+        y: 1365.8889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0c380fa54334724bb191d981ab2ea3e
+      internalID: 2114903098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_82
+      rect:
+        serializedVersion: 2
+        x: 3504
+        y: 1365.8889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1c18c69d865d5a4d80cc276c87682cf
+      internalID: 155948919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_83
+      rect:
+        serializedVersion: 2
+        x: 3796
+        y: 1365.8889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37556ee3d6d4202468c6fc03c4b54baa
+      internalID: -1352064600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 910.8889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 887d7b747a813b74186e69add34ff01a
+      internalID: -1228380121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_85
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 910.8889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 151bb42a31c4bf349b337b79c749cde5
+      internalID: -1995512129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_86
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 910.8889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23aa35b7fd075494e885a006d8fc0bec
+      internalID: -231389474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_87
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 910.8889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76940e9b1d8658548b892be371462554
+      internalID: -1069171195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_88
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 910.8889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82eb0d415c28dfd4cb6e4a7f1fafb5db
+      internalID: -1111042528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_89
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 910.8889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68ba9775c51216a41ba43884fefdf500
+      internalID: -2138236560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_90
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 910.8889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a620af41f4105f1469df8c3eac5d9dda
+      internalID: 2016870809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_91
+      rect:
+        serializedVersion: 2
+        x: 2044
+        y: 910.8889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74e743ab7d265df49a7af5f21d14cfec
+      internalID: -1971948256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_92
+      rect:
+        serializedVersion: 2
+        x: 2336
+        y: 910.8889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e70dc0503b4b5784b8b6fd1cf12721bf
+      internalID: 172104205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_93
+      rect:
+        serializedVersion: 2
+        x: 2628
+        y: 910.8889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3de4f341ccafa064a8a0fa243527e307
+      internalID: -1309259550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_94
+      rect:
+        serializedVersion: 2
+        x: 2920
+        y: 910.8889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f648cc17ece71074baaf48d91605246e
+      internalID: 837560283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_95
+      rect:
+        serializedVersion: 2
+        x: 3212
+        y: 910.8889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38e73a56cad54924bbe018ef964f1d20
+      internalID: -1772913203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_96
+      rect:
+        serializedVersion: 2
+        x: 3504
+        y: 910.8889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf601a05bf8e4914c83e740010dc3fa8
+      internalID: 587197977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_97
+      rect:
+        serializedVersion: 2
+        x: 3796
+        y: 910.8889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfbf9ac9b38071a4088394dd4da26886
+      internalID: 1903812070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_98
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 455.8889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fa0af457ef814c419ba5636f77fe111
+      internalID: 488460933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_99
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 455.8889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6662a87f0a7c124b99d33d3ad9d48a9
+      internalID: -1223933562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_100
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 455.8889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 015b53d74c297494294b5cb6fb3b8473
+      internalID: -873703135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_101
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 455.8889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ded653ad97ed8d840ac4a8ae400bf7bf
+      internalID: -1658190508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_102
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 455.8889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b139d60b311bb4149bf68c73830c0ade
+      internalID: 953196825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_103
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 455.8889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da0716db8e868f64b827578dea84f2c3
+      internalID: 697136448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_104
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 455.8889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 691ea197330966d4892694288079587b
+      internalID: -311365611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_105
+      rect:
+        serializedVersion: 2
+        x: 2044
+        y: 455.8889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dddee6bafd90d784eb26686be8a2362d
+      internalID: -1246015522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_106
+      rect:
+        serializedVersion: 2
+        x: 2336
+        y: 455.8889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b63a0cbae32fbff4ebce39755ddf8824
+      internalID: 304453394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_107
+      rect:
+        serializedVersion: 2
+        x: 2628
+        y: 455.8889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f060e06f0a5641c4c928d7641b81a5fe
+      internalID: -1517128978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_108
+      rect:
+        serializedVersion: 2
+        x: 2920
+        y: 455.8889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad1d6dd87ed10024b9cd62f27b6b6d7b
+      internalID: 2081841109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_109
+      rect:
+        serializedVersion: 2
+        x: 3212
+        y: 455.8889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a344e34246450704aada7a3ab94fd95d
+      internalID: -1085725633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_110
+      rect:
+        serializedVersion: 2
+        x: 3504
+        y: 455.8889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae2ebf40449e5734b9fc991f847e164f
+      internalID: -96699463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_111
+      rect:
+        serializedVersion: 2
+        x: 3796
+        y: 455.8889
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3df1c8e23ad08840aa0e294f30f1f6a
+      internalID: -749357450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_112
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0.8888855
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2170f1a9b14bef94cb8036b2d893665f
+      internalID: 1010541824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_113
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 0.8888855
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6df1edd1c1dc6947bbd3c1bafc986d7
+      internalID: -1777826537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_114
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 0.8888855
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce75c0726f9282e49a0dfa99d8a43637
+      internalID: 1474651170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_115
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 0.8888855
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17e3fbfaef067774a956165ed2bae0a6
+      internalID: 913527156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_116
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 0.8888855
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 493bdf85038686b4daa2c0a7ac5ccfd2
+      internalID: -1867836225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_117
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 0.8888855
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33c8247b269a3974784c0584d42dfca6
+      internalID: -1918820813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_118
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 0.8888855
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca55c9ea9b48ef84c8485606ca5772c1
+      internalID: 70502597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_119
+      rect:
+        serializedVersion: 2
+        x: 2044
+        y: 0.8888855
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5684748352455eb41a6f5797873f9b6c
+      internalID: 839873001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_120
+      rect:
+        serializedVersion: 2
+        x: 2336
+        y: 0.8888855
+        width: 292.57144
+        height: 455.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 435f5b0ff87ebbd47be44a3e2a5598a4
+      internalID: -1837080934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_121
+      rect:
+        serializedVersion: 2
+        x: 2673
+        y: 122
+        width: 195
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebef97db9e053ee4d83ee723d343be6b
+      internalID: -1318935925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_122
+      rect:
+        serializedVersion: 2
+        x: 2920
+        y: 1
+        width: 293
+        height: 450
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 861f2590fab6fc749a74f9d5ce3e3ebc
+      internalID: -1837395578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_123
+      rect:
+        serializedVersion: 2
+        x: 3223
+        y: 362
+        width: 294
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec7fede7b7e637b4c8789319cbd4b03b
+      internalID: 2126606173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_126
+      rect:
+        serializedVersion: 2
+        x: 3243
+        y: 229
+        width: 96
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4da3f3ed77abb2c40a113b5a2b6b2e57
+      internalID: -1781612551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_127
+      rect:
+        serializedVersion: 2
+        x: 3375
+        y: 226
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7e35356958979a4db4c3c39ed46b538
+      internalID: 290192098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_124
+      rect:
+        serializedVersion: 2
+        x: 3459
+        y: 225
+        width: 93
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9938e90a710fb4e4ba592aef1133e34b
+      internalID: 497037656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OhigeCard4k_125
+      rect:
+        serializedVersion: 2
+        x: 3236
+        y: 88
+        width: 132
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc00533ab14c5bd488ab8e0898c43fa8
+      internalID: -960898449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      OhigeCard4k_0: -1724330341
+      OhigeCard4k_1: 1959079902
+      OhigeCard4k_10: -574342937
+      OhigeCard4k_100: -873703135
+      OhigeCard4k_101: -1658190508
+      OhigeCard4k_102: 953196825
+      OhigeCard4k_103: 697136448
+      OhigeCard4k_104: -311365611
+      OhigeCard4k_105: -1246015522
+      OhigeCard4k_106: 304453394
+      OhigeCard4k_107: -1517128978
+      OhigeCard4k_108: 2081841109
+      OhigeCard4k_109: -1085725633
+      OhigeCard4k_11: 308230132
+      OhigeCard4k_110: -96699463
+      OhigeCard4k_111: -749357450
+      OhigeCard4k_112: 1010541824
+      OhigeCard4k_113: -1777826537
+      OhigeCard4k_114: 1474651170
+      OhigeCard4k_115: 913527156
+      OhigeCard4k_116: -1867836225
+      OhigeCard4k_117: -1918820813
+      OhigeCard4k_118: 70502597
+      OhigeCard4k_119: 839873001
+      OhigeCard4k_12: 1252501941
+      OhigeCard4k_120: -1837080934
+      OhigeCard4k_121: -1318935925
+      OhigeCard4k_122: -1837395578
+      OhigeCard4k_123: 2126606173
+      OhigeCard4k_124: 497037656
+      OhigeCard4k_125: -960898449
+      OhigeCard4k_126: -1781612551
+      OhigeCard4k_127: 290192098
+      OhigeCard4k_13: 75058200
+      OhigeCard4k_14: -527173329
+      OhigeCard4k_15: -2037953729
+      OhigeCard4k_16: 639714523
+      OhigeCard4k_17: -1364777598
+      OhigeCard4k_18: 4026204
+      OhigeCard4k_19: -2071463094
+      OhigeCard4k_2: 167519538
+      OhigeCard4k_20: 712059914
+      OhigeCard4k_21: -658922026
+      OhigeCard4k_22: -695977863
+      OhigeCard4k_23: -621577719
+      OhigeCard4k_24: -1059450440
+      OhigeCard4k_25: 1451736493
+      OhigeCard4k_26: 2032958835
+      OhigeCard4k_27: 1970780750
+      OhigeCard4k_28: -768585337
+      OhigeCard4k_29: -1931497504
+      OhigeCard4k_3: 912829866
+      OhigeCard4k_30: 90350865
+      OhigeCard4k_31: 1629937233
+      OhigeCard4k_32: 1961710816
+      OhigeCard4k_33: -1742774845
+      OhigeCard4k_34: -1371007678
+      OhigeCard4k_35: 834068099
+      OhigeCard4k_36: 874104372
+      OhigeCard4k_37: 640513543
+      OhigeCard4k_38: 1941314770
+      OhigeCard4k_39: 6632077
+      OhigeCard4k_4: -1686983174
+      OhigeCard4k_40: -1654182739
+      OhigeCard4k_41: -74118561
+      OhigeCard4k_42: -1362483816
+      OhigeCard4k_43: 1931390077
+      OhigeCard4k_44: 1763500257
+      OhigeCard4k_45: 215728678
+      OhigeCard4k_46: -249225881
+      OhigeCard4k_47: 587260483
+      OhigeCard4k_48: 1466487492
+      OhigeCard4k_49: 865562112
+      OhigeCard4k_5: -1930128842
+      OhigeCard4k_50: -1223858763
+      OhigeCard4k_51: 80094168
+      OhigeCard4k_52: -2015887459
+      OhigeCard4k_53: -1966494507
+      OhigeCard4k_54: -1464692082
+      OhigeCard4k_55: 63877008
+      OhigeCard4k_56: 1268318645
+      OhigeCard4k_57: -754261702
+      OhigeCard4k_58: 224236406
+      OhigeCard4k_59: 686220921
+      OhigeCard4k_6: -1632879919
+      OhigeCard4k_60: -1099422106
+      OhigeCard4k_61: 1452253387
+      OhigeCard4k_62: 535778232
+      OhigeCard4k_63: -181969204
+      OhigeCard4k_64: 292754025
+      OhigeCard4k_65: -579828420
+      OhigeCard4k_66: 413791473
+      OhigeCard4k_67: 663037343
+      OhigeCard4k_68: 1785608024
+      OhigeCard4k_69: -132809198
+      OhigeCard4k_7: -1230093358
+      OhigeCard4k_70: -74502361
+      OhigeCard4k_71: 1436831898
+      OhigeCard4k_72: 983772065
+      OhigeCard4k_73: -745813477
+      OhigeCard4k_74: 63609114
+      OhigeCard4k_75: 340524701
+      OhigeCard4k_76: -731496211
+      OhigeCard4k_77: 1180414531
+      OhigeCard4k_78: -1585441493
+      OhigeCard4k_79: -740613617
+      OhigeCard4k_8: -206667412
+      OhigeCard4k_80: -617459673
+      OhigeCard4k_81: 2114903098
+      OhigeCard4k_82: 155948919
+      OhigeCard4k_83: -1352064600
+      OhigeCard4k_84: -1228380121
+      OhigeCard4k_85: -1995512129
+      OhigeCard4k_86: -231389474
+      OhigeCard4k_87: -1069171195
+      OhigeCard4k_88: -1111042528
+      OhigeCard4k_89: -2138236560
+      OhigeCard4k_9: 837425382
+      OhigeCard4k_90: 2016870809
+      OhigeCard4k_91: -1971948256
+      OhigeCard4k_92: 172104205
+      OhigeCard4k_93: -1309259550
+      OhigeCard4k_94: 837560283
+      OhigeCard4k_95: -1772913203
+      OhigeCard4k_96: 587197977
+      OhigeCard4k_97: 1903812070
+      OhigeCard4k_98: 488460933
+      OhigeCard4k_99: -1223933562
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

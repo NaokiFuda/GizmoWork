@@ -1,0 +1,304 @@
+fileFormatVersion: 2
+guid: 5de5d5bcf1fc5b941b2570909c00d2b3
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Asphalt01
+    second: {fileID: 2100000, guid: 6188e14c1f15ea0449feaa397fd0fa27, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BigSaw
+    second: {fileID: 2100000, guid: 88e8865fa3ed6584481718a8e586d0c8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BigsiteTri
+    second: {fileID: 2100000, guid: 51c7fcb4d4de0484dbe8db90ebee43bd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BlackBlick01
+    second: {fileID: 2100000, guid: eb3c0b4de0bd9b14d908d2de5ab680e4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BlickPattern01
+    second: {fileID: 2100000, guid: b347505455648b74eba198d424423294, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BlickPattern02
+    second: {fileID: 2100000, guid: ed6d456fce0c2fb468f9db0b2efd2782, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BlueMetal01
+    second: {fileID: 2100000, guid: 8f08427b968cf1f4fabd9110b26aed8d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BlueRubber01
+    second: {fileID: 2100000, guid: 3a08ac9649513f5438b5053a845fd0ec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Concrete01
+    second: {fileID: 2100000, guid: 0d80226ef955ca443afa0d5d853b5fea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dart01
+    second: {fileID: 2100000, guid: e48e9373078d5134f813f2dd7d543cf2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ElavatorStep
+    second: {fileID: 2100000, guid: 29d653e4bd75ecd43b7952b42db2afe4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass01
+    second: {fileID: 2100000, guid: 09b6d26f6babf3147a6dbbdbfcc88c2f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Grass01
+    second: {fileID: 2100000, guid: 6926c2ee25be4294d9e3169d53bbf573, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Grass02
+    second: {fileID: 2100000, guid: eb936d3d16379bb4ab36d66063dc7880, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HalfStainedTile01.001
+    second: {fileID: 2100000, guid: 28ff1b211a52d624eafa5aa3a1a06d7a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HalfStainedTile02
+    second: {fileID: 2100000, guid: 09471b785afc4a04d864077d2f2093ca, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Iron01
+    second: {fileID: 2100000, guid: 39d96803fa4484e4a8118b40d252b154, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: KeyakiWood01
+    second: {fileID: 2100000, guid: b2bc0bfcb8fdda94f81a9df35478b52e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LeafProps
+    second: {fileID: 2100000, guid: b4544643027abf34fbba149b52332cb7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ParkConcreate01
+    second: {fileID: 2100000, guid: c488889af5972ae41ac3d4f8733426a3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PlaneBlick02
+    second: {fileID: 2100000, guid: c137be8f4b1b2a6419fd42dca6b1d737, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PlaneConcreate01
+    second: {fileID: 2100000, guid: a459f34143139464cbdad9be4db1a380, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PlaneConcreateBlick01
+    second: {fileID: 2100000, guid: a459f34143139464cbdad9be4db1a380, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PlaneTile01
+    second: {fileID: 2100000, guid: 6a730897a3ae3984c9cf102132c9b8de, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PointedTile01
+    second: {fileID: 2100000, guid: 1dd51e8fe2dce064da05ebf7ed64e401, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Props
+    second: {fileID: 2100000, guid: a19f5df302dd62540a582b9aff824ad3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SakuraStem
+    second: {fileID: 2100000, guid: 9bd9c927ae0907a439cba34b2e1c6819, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sand01
+    second: {fileID: 2100000, guid: e48e9373078d5134f813f2dd7d543cf2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sidewalk01
+    second: {fileID: 2100000, guid: 5e78400b846672d488a452ce8e86dffd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SpotedBlick01
+    second: {fileID: 2100000, guid: e7b894283255a2f4bb66940f7d1a4a3b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WhiteMetal01
+    second: {fileID: 2100000, guid: cf3326ea50dcca84aa02196a0f803476, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WhiteMetal02
+    second: {fileID: 2100000, guid: 3c9ee64917fae204da0684c3aaa067b2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WhiteMetal02.001
+    second: {fileID: 2100000, guid: 3c9ee64917fae204da0684c3aaa067b2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WhiteMetal03
+    second: {fileID: 2100000, guid: 101fe0b401abb2c48b1109b3adc8cfba, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WhitePlastic01
+    second: {fileID: 2100000, guid: bd9810079ea49ac42b029f59f88b904b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood01
+    second: {fileID: 2100000, guid: 341cd517551d2ad46bf23f30d7d68598, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood02
+    second: {fileID: 2100000, guid: 670a758e8f371b44e992cb506ddd974c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WoodStem02
+    second: {fileID: 2100000, guid: d4b0c0a00b408324fb76ab42fea2fcc6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: YellowLamp
+    second: {fileID: 2100000, guid: 55fdf9dba27545840bcdf84fa626474e, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 5
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 2
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
