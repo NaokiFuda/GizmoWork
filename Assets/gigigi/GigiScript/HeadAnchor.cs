@@ -12,7 +12,6 @@ public class HeadAnchor : UdonSharpBehaviour
     private bool m_isActive = false;
     [SerializeField] float AnchorUp = 0.6f;
     [SerializeField] bool rotateTopBottom = false;
-    [SerializeField] bool activeSelf = false;
 
     /// <summary>
     /// プレイヤー
