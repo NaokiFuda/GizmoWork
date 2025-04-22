@@ -13,11 +13,10 @@ public class PlaySEsOneShot : UdonSharpBehaviour
     [SerializeField] int hitSEIndex;
     [SerializeField] bool stayReact;
     [SerializeField] int staySEIndex;
+    public int GetStaySEIndex() { return staySEIndex; }
+    public int GetHitSEIndex() {return hitSEIndex; }
     public int playIndex;
     AudioSource audioSource;
-    public bool trigerJump;
-    public Vector2 inputMovement;
-    bool playerStayInArea;
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -34,43 +33,12 @@ public class PlaySEsOneShot : UdonSharpBehaviour
             PlayAction(hitSEIndex);
         }
     }
-    private void OnTriggerExit(Collider other)
-    {
-        if (hitReact && other.gameObject.layer == 4)
-        {
-            playerStayInArea = false;
-        }
-    }
-    private void OnTriggerStay(Collider other)
-    {
-        if (stayReact && !playerStayInArea && other.gameObject.layer == 4)
-        {
-            playerStayInArea = true;
-        }
-    }
-    private void FixedUpdate()
-    {
-        if (playerStayInArea)
-        {
-            if (inputMovement != Vector2.zero)
-            {
-                playIndex = staySEIndex;
-                if ( !audioSource.isPlaying) PlayAction(playIndex, inputMovement.magnitude);
-
-            }
-            if (trigerJump) 
-            {
-                playIndex = hitSEIndex;
-                if(!audioSource.isPlaying) Activate();
-            }
-        }
-        
-    }
-    void PlayAction(int index)
+    
+    public void PlayAction(int index)
     {
         audioSource.PlayOneShot(audioClipList[index]);
     }
-    void PlayAction(int index,float roudness)
+    public void PlayAction(int index,float roudness)
     {
         audioSource.PlayOneShot(audioClipList[index], roudness);
     }

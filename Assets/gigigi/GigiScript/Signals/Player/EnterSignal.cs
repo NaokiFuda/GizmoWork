@@ -21,7 +21,6 @@ public class EnterSignal : UdonSharpBehaviour
 	[SerializeField] bool Killself = false;
     bool Locker = false;
 
-	bool act = false;
     UdonBehaviour[] _chashedClass;
 
 	public override void OnPlayerTriggerEnter(VRCPlayerApi player)

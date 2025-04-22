@@ -16,9 +16,10 @@ public class PlayerMovementSetter : UdonSharpBehaviour
 
     [SerializeField] GiGiWorldSettings worldSettings;
     [SerializeField] PlayerRayManager playerRayManager;
-    [SerializeField] UdonBehaviour[] actions;
+    [SerializeField] PlaySEsOneShot[] actions;
     [SerializeField] UdonBehaviour[] trigerActions;
     [SerializeField] String[] actionsName;
+    [SerializeField] float waterDepth = 0.1f; 
     public float waitmas;
 
     bool trigerJump = false;
@@ -47,10 +48,11 @@ public class PlayerMovementSetter : UdonSharpBehaviour
     {
         if (player.isLocal)
         {
+            int localID =player.playerId - 1;
             if (_doSink)
             {
-                if (borderHeight < player.GetAvatarEyeHeightAsMeters()/2) _doSink = false;
-                Debug.Log(_doSink);
+                if (borderHeight > waterDepth){ _doSink = false; lastPos = (player.GetBonePosition(HumanBodyBones.Head) + player.GetPosition())/2; }
+                
             }
             else
             {
@@ -78,25 +80,16 @@ public class PlayerMovementSetter : UdonSharpBehaviour
                 Networking.LocalPlayer.SetVelocity(junpForce);
                 TrigerAction();
 
-                if (trigerActions.Length > 0)
-                {
-                    foreach (var triger in actions)
-                    {
-                        triger.SetProgramVariable<bool>("trigerJump", trigerJump);
-                    }
-                }
+                actions[localID].PlayAction(actions[localID].GetHitSEIndex());
+                    Debug.Log("test");
+                
             }
             if (inputMovement != Vector2.zero) 
             {
                 TrigerAction();
 
-                if (trigerActions.Length > 0)
-                {
-                    foreach (var triger in actions)
-                    {
-                        triger.SetProgramVariable("inputMovement", inputMovement);
-                    }
-                }
+                actions[localID].PlayAction(actions[localID].GetStaySEIndex(), inputMovement.magnitude);
+                
             }
         }
     }
@@ -106,7 +99,6 @@ public class PlayerMovementSetter : UdonSharpBehaviour
         if (player.isLocal)
         {
             _doSink = true;
-            Debug.Log("Enter!");
         }
     }
     public void OnPlayerExit(VRCPlayerApi player)
@@ -114,7 +106,6 @@ public class PlayerMovementSetter : UdonSharpBehaviour
         if (player.isLocal)
         {
             _doSink = false;
-            Debug.Log("Exit");
         }
     }
 
