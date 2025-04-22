@@ -42,5 +42,15 @@ public class PlaySEsOneShot : UdonSharpBehaviour
     {
         audioSource.PlayOneShot(audioClipList[index], roudness);
     }
+    public void PlayAction(int index, bool wait)
+    {
+        if(wait&& !audioSource.isPlaying)
+        audioSource.PlayOneShot(audioClipList[index]);
+    }
+    public void PlayAction(int index, float roudness, bool wait)
+    {
+        if (wait && !audioSource.isPlaying)
+            audioSource.PlayOneShot(audioClipList[index], roudness);
+    }
 
 }
