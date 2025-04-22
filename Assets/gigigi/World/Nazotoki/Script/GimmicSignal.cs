@@ -10,7 +10,6 @@ public class GimmicSignal : UdonSharpBehaviour
     [SerializeField] Transform[] targets;
     [SerializeField] Transform[] telepotTo;
     [SerializeField] string methodName = "Activate";
-    [SerializeField] string className = "";
     [SerializeField] int layerNum = 28;
     [SerializeField] bool sendSignal;
     [SerializeField] bool isLocal = true;
