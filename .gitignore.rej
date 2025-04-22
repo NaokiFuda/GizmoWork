@@ -1,0 +1,6 @@
+diff a/.gitignore b/.gitignore	(rejected hunks)
+@@ -72,3 +72,4 @@
+ # Temporary auto-generated Android Assets
+ /[Aa]ssets/[Ss]treamingAssets/aa.meta
+ /[Aa]ssets/[Ss]treamingAssets/aa/*
++Assets/SerializedUdonPrograms/9809364f757f29e4c98285dacf0d8c64.asset

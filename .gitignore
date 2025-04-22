@@ -72,6 +72,9 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+<<<<<<< HEAD
+Assets/SerializedUdonPrograms/9809364f757f29e4c98285dacf0d8c64.asset
+=======
 Assets/SerializedUdonPrograms/09a6c3c2c285b124084a3ef302303a3a.asset
 Assets/SerializedUdonPrograms/0a72a8c9e3546164f9c7c6138020302f.asset
 Assets/SerializedUdonPrograms/0fc8e2c0c4e6cf646b169d7162aac287.asset
@@ -211,3 +214,4 @@ Assets/HoshinoLabs/iwaSync3/Udon/VideoCore.asset
 Assets/HoshinoLabs/iwaSync3/Udon/VideoScreen.asset
 Assets/SerializedUdonPrograms/08859f2a8f510d945a1e678f56bce5e2.asset
 Packages/packages-lock.json
+>>>>>>> 2599c6ec3bdb925d458b39e928366ea094acfd8c
