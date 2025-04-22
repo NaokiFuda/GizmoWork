@@ -80,15 +80,14 @@ public class PlayerMovementSetter : UdonSharpBehaviour
                 Networking.LocalPlayer.SetVelocity(junpForce);
                 TrigerAction();
 
-                actions[localID].PlayAction(actions[localID].GetHitSEIndex());
-                    Debug.Log("test");
+                actions[localID].PlayAction(actions[localID].GetHitSEIndex(),true);
                 
             }
             if (inputMovement != Vector2.zero) 
             {
                 TrigerAction();
 
-                actions[localID].PlayAction(actions[localID].GetStaySEIndex(), inputMovement.magnitude);
+                actions[localID].PlayAction(actions[localID].GetStaySEIndex(), inputMovement.magnitude,true);
                 
             }
         }

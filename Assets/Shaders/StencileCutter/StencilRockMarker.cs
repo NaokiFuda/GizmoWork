@@ -1,5 +1,4 @@
-﻿
-using UdonSharp;
+﻿using UdonSharp;
 using UnityEngine;
 using VRC.SDKBase;
 using VRC.Udon;
@@ -13,8 +12,8 @@ public class StencilRockMarker : UdonSharpBehaviour
     void Start()
     {
         _mpb = new MaterialPropertyBlock();
-        if (targetRenderer == null) targetRenderer= GetComponent<Renderer>();
-        if(stencilRenderer == null) stencilRenderer = transform.GetComponentInChildren<Renderer>();
+        if (targetRenderer == null) targetRenderer = GetComponent<Renderer>();
+        if (stencilRenderer == null) stencilRenderer = transform.GetComponentInChildren<Renderer>();
         ApplyHitPosition(new Vector4(0, 0, 0, 1));
 
     }

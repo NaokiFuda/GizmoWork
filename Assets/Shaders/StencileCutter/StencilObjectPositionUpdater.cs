@@ -1,5 +1,4 @@
-﻿
-using UdonSharp;
+﻿using UdonSharp;
 using UnityEngine;
 using VRC.SDKBase;
 using VRC.Udon;
@@ -16,7 +15,7 @@ public class StencilObjectPositionUpdater : UdonSharpBehaviour
     void Start()
     {
         _mpb2 = new MaterialPropertyBlock();
-        if (stencilRenderer== null)stencilRenderer.GetComponent<Renderer>();
+        if (stencilRenderer == null) stencilRenderer.GetComponent<Renderer>();
     }
 
 
@@ -50,7 +49,7 @@ public class StencilObjectPositionUpdater : UdonSharpBehaviour
     {
         if (other.gameObject.layer == layerNumber)
         {
-            if(targetRenderer==null) targetRenderer = other.GetComponent<Renderer>();
+            if (targetRenderer == null) targetRenderer = other.GetComponent<Renderer>();
             Vector4 hitPos = other.ClosestPoint(transform.position);
             hitPos.w = 1.0f; // ← 有効化スイッチ！
             ApplyHitPosition(hitPos);

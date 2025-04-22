@@ -121,6 +121,11 @@ PrefabInstance:
       propertyPath: allowErrorReduceMaxResolution
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -6261936936318354846, guid: f11e66d7671604b48b7ea0c0de70cf41,
+        type: 3}
+      propertyPath: serializationData.SerializedFormat
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6672159798105151873, guid: f11e66d7671604b48b7ea0c0de70cf41,
         type: 3}
       propertyPath: m_RootOrder
@@ -190,17 +195,27 @@ PrefabInstance:
         type: 3}
       propertyPath: serializedProgramAsset
       value: 
-      objectReference: {fileID: 11400000, guid: 1c8bb086499dfc64aa3de7f7249ee2c4,
+      objectReference: {fileID: 11400000, guid: 9ebc79ed471d3964db3a6be51379d2e4,
         type: 2}
     - target: {fileID: 6672159798345049807, guid: f11e66d7671604b48b7ea0c0de70cf41,
         type: 3}
       propertyPath: maximumResolution
       value: 1080
       objectReference: {fileID: 0}
+    - target: {fileID: 7283794805097733747, guid: f11e66d7671604b48b7ea0c0de70cf41,
+        type: 3}
+      propertyPath: serializedProgramAsset
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7418595852981777910, guid: f11e66d7671604b48b7ea0c0de70cf41,
         type: 3}
       propertyPath: serializationData.Prefab
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7418595852981777910, guid: f11e66d7671604b48b7ea0c0de70cf41,
+        type: 3}
+      propertyPath: serializationData.SerializedFormat
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -359,11 +374,16 @@ PrefabInstance:
       propertyPath: serializationData.Prefab
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: -866039220434859315, guid: 956d393391c01d346869bdb6349006b7,
+        type: 3}
+      propertyPath: serializationData.SerializedFormat
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2367747703092269794, guid: 956d393391c01d346869bdb6349006b7,
         type: 3}
       propertyPath: serializedProgramAsset
       value: 
-      objectReference: {fileID: 11400000, guid: a8c16ec6675d1df4a896621fb81902d1,
+      objectReference: {fileID: 11400000, guid: 070b8e57392096b429f0bf344576afb9,
         type: 2}
     - target: {fileID: 5964695351249358794, guid: 956d393391c01d346869bdb6349006b7,
         type: 3}
@@ -448,7 +468,7 @@ PrefabInstance:
         type: 3}
       propertyPath: serializedProgramAsset
       value: 
-      objectReference: {fileID: 11400000, guid: 7c0fd1bd83aadfb43936559f892b46cf,
+      objectReference: {fileID: 11400000, guid: f98faa00593e12b46baa6f938e006e9c,
         type: 2}
     - target: {fileID: 1418041251502205469, guid: b38cf4e25af134e4e8787e47a5e2620d,
         type: 3}
@@ -779,6 +799,11 @@ PrefabInstance:
         type: 3}
       propertyPath: serializationData.Prefab
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3462246647951339383, guid: b38cf4e25af134e4e8787e47a5e2620d,
+        type: 3}
+      propertyPath: serializationData.SerializedFormat
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1358,6 +1383,11 @@ PrefabInstance:
       propertyPath: serializationData.Prefab
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1056032010288105910, guid: cfb16977acb70ad4fb0b35f95e6dc0a9,
+        type: 3}
+      propertyPath: serializationData.SerializedFormat
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7838308742288634934, guid: cfb16977acb70ad4fb0b35f95e6dc0a9,
         type: 3}
       propertyPath: m_RootOrder
@@ -1422,7 +1452,7 @@ PrefabInstance:
         type: 3}
       propertyPath: serializedProgramAsset
       value: 
-      objectReference: {fileID: 11400000, guid: b9520355f77aca64f961c610e0077f8c,
+      objectReference: {fileID: 11400000, guid: cff24a6bd80b6e64eb0d043767b4ae41,
         type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
