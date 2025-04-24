@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: TheHollMaker
-  m_Shader: {fileID: 4800000, guid: 16397d4dd8ebf2246b202f1635bd039c, type: 3}
+  m_Shader: {fileID: 4800000, guid: f62a6c6fd29aa57439d130e4e4773000, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -100,6 +100,7 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 0}
     - _CutterColor: {r: 1, g: 0, b: 0, a: 0.3}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
+    - _HitPosition: {r: 0, g: 0, b: 0, a: 0}
     - _ReferencePosition: {r: 0, g: 0, b: 0, a: 0}
     - _StencilObjPos: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []

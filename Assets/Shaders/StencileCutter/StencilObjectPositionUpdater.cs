@@ -15,7 +15,7 @@ public class StencilObjectPositionUpdater : UdonSharpBehaviour
     void Start()
     {
         _mpb2 = new MaterialPropertyBlock();
-        if (stencilRenderer == null) stencilRenderer.GetComponent<Renderer>();
+        if (stencilRenderer == null) GetComponent<Renderer>();
     }
 
 
