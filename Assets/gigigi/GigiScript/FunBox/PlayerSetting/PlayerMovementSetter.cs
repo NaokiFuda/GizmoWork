@@ -19,8 +19,8 @@ public class PlayerMovementSetter : UdonSharpBehaviour
     [SerializeField] PlaySEsOneShot[] actions;
     [SerializeField] UdonBehaviour[] trigerActions;
     [SerializeField] String[] actionsName;
-    [SerializeField] float waterDepth = 0.1f; 
-    public float waitmas;
+    [SerializeField] float waterDepth = 0.1f;
+    [SerializeField] float flictionFactor = 0.1f;
 
     bool trigerJump = false;
     Vector2 inputMovement;
@@ -44,39 +44,40 @@ public class PlayerMovementSetter : UdonSharpBehaviour
         else localPlayer.SetGravityStrength(worldSettings.gravity);
     }
     Vector3 lastPos;
+    float fliction;
     public void OnPlayerStay(VRCPlayerApi player)
     {
         if (player.isLocal)
         {
             int localID =player.playerId - 1;
+            var headPos = player.GetBonePosition(HumanBodyBones.Head);
+            var hipPos = player.GetBonePosition(HumanBodyBones.Hips);
+            var massHeight = borderHeight - ((headPos + hipPos)/2).y + Mathf.Abs(headPos.y - hipPos.y);
+            var floatVel = Vector3.zero;
             if (_doSink)
             {
-                if (borderHeight > waterDepth){ _doSink = false; lastPos = (player.GetBonePosition(HumanBodyBones.Head) + player.GetPosition())/2; }
-                
+                if (massHeight > waterDepth){ _doSink = false; }
             }
             else
             {
-                var Head = player.GetBonePosition(HumanBodyBones.Head);
-                var hip = player.GetPosition();
-                var pos = (Head + hip) / 2;
-                if (waitmas == 0) waitmas = (Head - hip).y/3;
-                var friction = lastPos - pos;
-                friction.y = 0;
-                var plVel = player.GetVelocity();
-                var mass = borderHeight + waitmas;
-                var floatVel = Vector3.up * gravity * mass * mass;
-                if (mass < 0) floatVel = Vector3.zero;
-                var waterVel = plVel + friction + floatVel;
-                if (waterVel.y > 0)
-                    if (mass > 0f && mass < 0.01f || waterVel.y > 0.5f) waterVel.y = 0;
-                player.SetVelocity(waterVel);
-                lastPos = (Head + hip) / 2;
+                if (massHeight < 0) massHeight = 0;
+                floatVel = Vector3.up * gravity*2 * massHeight * massHeight * massHeight;
+
             }
+            var velocity = player.GetVelocity();
+            velocity.y = Mathf.Min(0, velocity.y) / 1.02f;
+            velocity *= 1.01f;
+            var force = velocity.magnitude;
+            fliction = Mathf.Lerp(fliction, force, flictionFactor * Time.deltaTime);
+            var flictionVel = velocity.normalized * fliction;
+            flictionVel.y = 0;
+            player.SetVelocity(velocity - flictionVel+ floatVel);
+            if(force < 0.01f) fliction = 0;
 
             if (trigerJump)
             {
-                var head = playerRayManager.GetPlayerHeadTransform();
-                var junpForce = head.forward * inputMovement.x +  Vector3.up * jump / 1.2f + head.right * inputMovement.y;
+                var headTransform = playerRayManager.GetPlayerHeadTransform();
+                var junpForce = headTransform.forward * inputMovement.x +  Vector3.up * jump / 1.2f + headTransform.right * inputMovement.y;
                 Networking.LocalPlayer.SetVelocity(junpForce);
                 TrigerAction();
 
@@ -105,6 +106,7 @@ public class PlayerMovementSetter : UdonSharpBehaviour
         if (player.isLocal)
         {
             _doSink = false;
+            
         }
     }
 

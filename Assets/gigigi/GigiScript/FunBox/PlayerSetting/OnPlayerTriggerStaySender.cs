@@ -8,21 +8,18 @@ public class OnPlayerTriggerStaySender : UdonSharpBehaviour
 {
     [SerializeField] PlayerMovementSetter playerMovementSetter;
 
-    BoxCollider hitCollider;
+    BoxCollider thisCollider;
     float colliderHeight;
-    float borderHeight;
     private void Start()
     {
-        hitCollider = GetComponent<BoxCollider>();
-        colliderHeight = transform.position.y + hitCollider.center.y + hitCollider.size.y / 2;
+        thisCollider = GetComponent<BoxCollider>();
+        colliderHeight = transform.position.y + thisCollider.center.y + thisCollider.size.y / 2;
     }
     public override void OnPlayerTriggerStay(VRCPlayerApi player)
     {
         if(player.isLocal)
         {
             playerMovementSetter.OnPlayerStay(player);
-            borderHeight = colliderHeight - player.GetTrackingData(VRCPlayerApi.TrackingDataType.Head).position.y;
-            playerMovementSetter.SetProgramVariable("borderHeight", borderHeight);
         }
     }
     public override void OnPlayerTriggerEnter(VRCPlayerApi player)
@@ -30,6 +27,7 @@ public class OnPlayerTriggerStaySender : UdonSharpBehaviour
         if (player.isLocal)
         {
             playerMovementSetter.OnPlayerEnter(player);
+            playerMovementSetter.SetProgramVariable("borderHeight", colliderHeight);
         }
     }
     public override void OnPlayerTriggerExit(VRCPlayerApi player)
