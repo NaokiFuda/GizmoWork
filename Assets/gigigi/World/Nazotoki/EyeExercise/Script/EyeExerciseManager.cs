@@ -42,18 +42,25 @@ public class EyeExerciseManager : UdonSharpBehaviour
         {
             if (_targetedTargetIndexs[i])
             {
-
                 if (!inputHandIsLeft[i])
                 {
                     Vector3 dir = Networking.LocalPlayer.GetTrackingData(VRCPlayerApi.TrackingDataType.RightHand).position - _lasthandPos[0];
-                    if (dir.sqrMagnitude > 0.1f && Vector3.Dot(dir, _targetDir[i]) > 0.9f) { _knockedTargetIndexs[i] = true; }
-
+                    if(dir.sqrMagnitude > 0.1f )
+                    {
+                        dir = new Vector3(dir.x * Mathf.Abs(_targetDir[i].x), dir.y * Mathf.Abs(_targetDir[i].y), dir.z * Mathf.Abs(_targetDir[i].z));
+                        if (Vector3.Dot(dir, _targetDir[i]) > 0.7f) { _knockedTargetIndexs[i] = true; }
+                        Debug.Log(_targets[i].transform.GetChild(0).right +" " + dir);
+                    }
                     _lasthandPos[0] = Networking.LocalPlayer.GetTrackingData(VRCPlayerApi.TrackingDataType.RightHand).position;
                 }
                 else
                 {
                     Vector3 dir = Networking.LocalPlayer.GetTrackingData(VRCPlayerApi.TrackingDataType.LeftHand).position - _lasthandPos[1];
-                    if (dir.sqrMagnitude > 0.1f && Vector3.Dot(dir, _targetDir[i]) > 0.9f) { _knockedTargetIndexs[i] = true; }
+                    if (dir.sqrMagnitude > 0.1f)
+                    {
+                        dir = new Vector3(dir.x * _targetDir[i].x, dir.y * _targetDir[i].y, dir.z * _targetDir[i].z);
+                        if (Vector3.Dot(dir, _targetDir[i]) > 0.7f) { _knockedTargetIndexs[i] = true; }
+                    }
 
                     _lasthandPos[1] = Networking.LocalPlayer.GetTrackingData(VRCPlayerApi.TrackingDataType.LeftHand).position;
                 }
