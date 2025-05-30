@@ -14,7 +14,7 @@ public class EyeSightPointer : UdonSharpBehaviour
     [SerializeField] float hitDistance;
     float _maxDistance;
 
-    private void Start()
+    private void OnEnable()
     {
         if(hitDistance ==0)
             _maxDistance = Vector3.Distance(startPoint.position, eyeExerciseManager.popArea.position);
@@ -34,6 +34,6 @@ public class EyeSightPointer : UdonSharpBehaviour
                     eyeExerciseManager.KnockBackTarget(hit.collider.transform, args);
         }
         else
-            eyeExerciseManager.UnLockTarget(args);
+            eyeExerciseManager.UnLockTarget();
     }
 }
