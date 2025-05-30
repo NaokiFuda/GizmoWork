@@ -5,6 +5,9 @@
     },
     "com.vrchat.worlds": {
       "version": "3.8.1"
+    },
+    "jp.lilxyzw.liltoon": {
+      "version": "1.10.3"
     }
   },
   "locked": {
@@ -21,6 +24,9 @@
     "com.vrchat.base": {
       "version": "3.8.1",
       "dependencies": {}
+    },
+    "jp.lilxyzw.liltoon": {
+      "version": "1.10.3"
     }
   }
 }
