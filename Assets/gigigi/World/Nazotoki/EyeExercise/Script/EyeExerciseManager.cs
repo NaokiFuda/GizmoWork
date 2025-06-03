@@ -15,6 +15,7 @@ public class EyeExerciseManager : UdonSharpBehaviour
     [SerializeField] EyeSightPointer eyeSightPointer;
     [SerializeField] public Transform popArea;
     [SerializeField] float delayTime = 1f;
+    [SerializeField] float threshold = 0.08f;
     GameObject[] _targets = new GameObject[3];
     float[] setedSpeed;
     bool[] _targetedTargetIndexs;
@@ -24,6 +25,7 @@ public class EyeExerciseManager : UdonSharpBehaviour
     Vector3[] _lasthandPos = new Vector3[2];
     bool[] inputHandIsLeft;
     bool _isgameStart;
+    float _timer= 0f;
 
     void Start()
     {
@@ -45,6 +47,8 @@ public class EyeExerciseManager : UdonSharpBehaviour
     {
         if (!_isgameStart) return;
 
+        _timer += Time.deltaTime;
+
         for (int i = 0; i < _targets.Length; i ++)
         {
             if (_targetedTargetIndexs[i])
@@ -55,9 +59,8 @@ public class EyeExerciseManager : UdonSharpBehaviour
                     
                     if (dir.sqrMagnitude > 0.0001f )
                     {
-                        dir = new Vector3(dir.x * Mathf.Abs(_targetDir[i].x), dir.y * Mathf.Abs(_targetDir[i].y), dir.z * Mathf.Abs(_targetDir[i].z));
-                        if (Vector3.Dot(dir.normalized, _targetDir[i]) > 0.7f) { _knockedTargetIndexs[i] = true; }
-                        
+                        float dot = Vector3.Dot(dir, _targetDir[i]);
+                        if (dot > threshold) { _knockedTargetIndexs[i] = true; }
                     }
                 }
                 else
@@ -65,8 +68,8 @@ public class EyeExerciseManager : UdonSharpBehaviour
                     Vector3 dir = Networking.LocalPlayer.GetTrackingData(VRCPlayerApi.TrackingDataType.LeftHand).position - _lasthandPos[1];
                     if (dir.sqrMagnitude > 0.0001f)
                     {
-                        dir = new Vector3(dir.x * _targetDir[i].x, dir.y * _targetDir[i].y, dir.z * _targetDir[i].z);
-                        if (Vector3.Dot(dir.normalized, _targetDir[i]) > 0.7f) { _knockedTargetIndexs[i] = true; }
+                        float dot = Vector3.Dot(dir, _targetDir[i]);
+                        if (dot > threshold) { _knockedTargetIndexs[i] = true; }
                     }
                     
                 }
@@ -84,6 +87,7 @@ public class EyeExerciseManager : UdonSharpBehaviour
         }
 
     }
+    [SerializeField] AnimationCurve spawnDifficultyCurve = AnimationCurve.EaseInOut(timeStart: 0f, valueStart: 1f, timeEnd: 60f, valueEnd: 60f);
     void InitilizeTarget(in int i)
     {
         _knockedTargetIndexs[i] = false;
@@ -91,6 +95,9 @@ public class EyeExerciseManager : UdonSharpBehaviour
         setedSpeed[i] = randomSpeeds[Random.Range(0, randomSpeeds.Length-1)];
         _targetDir[i] = _directionList[Random.Range(0, 3)];
         _targets[i].transform.GetChild(0).rotation = Quaternion.FromToRotation(_targets[i].transform.GetChild(0).right, _targetDir[i]) * _targets[i].transform.GetChild(0).rotation;
+        var scale = 0.3f / spawnDifficultyCurve.Evaluate(_timer);
+        _targets[i].transform.GetChild(0).localScale = Vector3.one * Random.Range(scale, scale + 0.03f);
+        
     }
 
     void MoveTarget(in Transform target, in int i)
@@ -98,7 +105,7 @@ public class EyeExerciseManager : UdonSharpBehaviour
         float speed = setedSpeed[i];
         if (_knockedTargetIndexs[i]) speed = -randomSpeeds[randomSpeeds.Length-1];
 
-        target.position += target.forward * speed;
+        target.position += target.forward * speed * Time.deltaTime * 100f;
     }
 
     public void KnockBackTarget(in Transform target, in UdonInputEventArgs args)
@@ -135,6 +142,7 @@ public class EyeExerciseManager : UdonSharpBehaviour
     } 
     public void InitilizeGame()
     {
+        _timer = 0;
         eyeSightPointer.enabled = true;
         _isgameStart = true;
         for (int i = 0; i < _targets.Length; i++) { InitilizeTarget(i); _targets[i].transform.position = new Vector3(_targets[i].transform.position.x, _targets[i].transform.position.y, popArea.position.z); }

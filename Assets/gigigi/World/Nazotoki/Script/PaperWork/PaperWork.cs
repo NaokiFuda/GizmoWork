@@ -7,13 +7,14 @@ using VRC.Udon.Common;
 
 public class PaperWork : UdonSharpBehaviour
 {
-    PaperFlatter[] paperFlatters;
-    PaperFlatter onFiledPaperClass;
+    FuwaFuwaMovement[] paperFlatters;
+    FuwaFuwaMovement onFiledPaperClass;
     Vector3[] paperLocalPoss;
     Quaternion[] paperLocalRots;
+    Rigidbody rb;
     private void Start()
     {
-        paperFlatters = GetComponentsInChildren<PaperFlatter>();
+        paperFlatters = GetComponentsInChildren<FuwaFuwaMovement>();
         paperLocalPoss = new Vector3[paperFlatters.Length];
         paperLocalRots = new Quaternion[paperFlatters.Length];
         for (int i = 0; i < paperFlatters.Length; i++)
@@ -26,19 +27,22 @@ public class PaperWork : UdonSharpBehaviour
     public void EmitPaper()
     {
         _emitted = true;
-        foreach (PaperFlatter t in paperFlatters) 
+        foreach (FuwaFuwaMovement t in paperFlatters) 
         {
+            rb = t.transform.GetComponent<Rigidbody>();
             t.transform.parent = null;
-            t.DoFlatter();
+            rb.useGravity = true;
+            rb.isKinematic = false;
             t.GetComponent<VRC_Pickup>().pickupable = true;
-            t.GetComponent<Collider>().isTrigger = false;
-
+            t.GetComponent<Collider>().enabled = true;
         }
     }
-    public void ResetPaper(Transform t, PaperFlatter method)
+    public void ResetPaper(Transform t, FuwaFuwaMovement method)
     {
-        method.ResetPaper();
-        if(t.GetComponent<VRC_Pickup>().IsHeld) t.GetComponent<VRC_Pickup>().Drop();
+        rb = t.transform.GetComponent<Rigidbody>();
+        rb.useGravity = false;
+        rb.isKinematic = true;
+        if (t.GetComponent<VRC_Pickup>().IsHeld) t.GetComponent<VRC_Pickup>().Drop();
         t.parent = transform;
         for (int i = 0; i < paperFlatters.Length; i++)
         {
@@ -49,7 +53,7 @@ public class PaperWork : UdonSharpBehaviour
             }
         }
         t.GetComponent<VRC_Pickup>().pickupable = false;
-        t.GetComponent<Collider>().isTrigger = true;
+        t.GetComponent<Collider>().enabled = false;
         method.DoStraighten();
     }
 
@@ -77,7 +81,7 @@ public class PaperWork : UdonSharpBehaviour
     bool _colliderIn;
     private void OnCollisionExit(Collision collision)
     {
-        if (collision.transform.GetComponent<PaperFlatter>())
+        if (collision.transform.GetComponent<FuwaFuwaMovement>())
         {
             _colliderIn = false;
             onFiledPaperClass = null;
@@ -86,10 +90,10 @@ public class PaperWork : UdonSharpBehaviour
     
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.transform.GetComponent<PaperFlatter>())
+        if (collision.transform.GetComponent<FuwaFuwaMovement>())
         {
             _colliderIn = true;
-            onFiledPaperClass = collision.transform.GetComponent<PaperFlatter>();
+            onFiledPaperClass = collision.transform.GetComponent<FuwaFuwaMovement>();
         }
     }
 }

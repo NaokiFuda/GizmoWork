@@ -10,7 +10,6 @@ public class EyeSightPointer : UdonSharpBehaviour
     [SerializeField] PlayerRayManager playerRayManager;
     [SerializeField] EyeExerciseManager eyeExerciseManager;
     [SerializeField] Transform startPoint;
-    [SerializeField] float hitRadius = 0.3f;
     [SerializeField] float hitDistance;
     float _maxDistance;
 

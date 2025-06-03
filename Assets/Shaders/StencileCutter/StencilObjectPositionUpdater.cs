@@ -27,12 +27,10 @@ public class StencilObjectPositionUpdater : UdonSharpBehaviour
         targetRenderer.SetPropertyBlock(_mpb2);
         stencilRenderer.SetPropertyBlock(_mpb2);
     }
-    bool _hollmaking;
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == layerNumber)
         {
-            _hollmaking = true;
             targetRenderer = other.GetComponent<Renderer>();
         }
     }
@@ -40,7 +38,6 @@ public class StencilObjectPositionUpdater : UdonSharpBehaviour
     {
         if (other.gameObject.layer == layerNumber)
         {
-            _hollmaking = false;
             ApplyHitPosition(new Vector4(0, 0, 0, 0)); // 無効化
             targetRenderer = null;
         }
