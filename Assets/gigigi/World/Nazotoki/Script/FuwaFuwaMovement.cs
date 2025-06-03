@@ -3,26 +3,42 @@ using UdonSharp;
 using UnityEngine;
 using VRC.SDKBase;
 using VRC.Udon;
+using VRC.Udon.Common;
 
 public class FuwaFuwaMovement : UdonSharpBehaviour
-{ 
+{
     [SerializeField] Transform rootBone;
     Transform[] bonesTransform;
     float[] bonesLength;
     Vector3 _lastPos;
     Vector3 _lastDir;
     Vector3[] _defDir;
-    Vector3 _lastForceDir;
-    float[] _lastGap;
     float[] _lastForce;
-    float[] _delta;
-    bool[] _doBounce;
-    float[] _deltaRet;
-    Vector3[] _rebounceDir;
-    Quaternion[] _defRot;
+    float[] _deltaForce;
     float maxLength;
 
-    void Start()
+    Quaternion[] _defRot;
+    [SerializeField] private bool suppressX = false, suppressY = false, suppressZ = false;
+    [SerializeField][Range(0, 1)] private float[] suppressionStrengths = new float[3] { 0, 0, 0 };
+
+    int grabIndex = -1;
+    [SerializeField] Transform[] grabPoint;
+    Transform[] _grabedParent;
+
+
+
+    [SerializeField] AnimationCurve hardness = AnimationCurve.EaseInOut(timeStart: 0f, valueStart: 0.1f, timeEnd: 1f, valueEnd: 0.1f);
+    [SerializeField] AnimationCurve rebounceness = AnimationCurve.EaseInOut(timeStart: 0f, valueStart: 0.5f, timeEnd: 1f, valueEnd: 0.5f);
+    [SerializeField] AnimationCurve angleLimitness = AnimationCurve.EaseInOut(timeStart: 0f, valueStart: 1f, timeEnd: 1f, valueEnd: 1f);
+    [SerializeField] float angleLimit = 90f;
+
+
+
+    [SerializeField] float glabDistance = 0.3f;
+
+
+
+    void OnEnable()
     {
         if (rootBone == null) { rootBone = transform; }
         bonesTransform = rootBone.transform.GetComponentsInChildren<Transform>();
@@ -30,11 +46,8 @@ public class FuwaFuwaMovement : UdonSharpBehaviour
         _lastForce = new float[bonesTransform.Length];
         _defDir = new Vector3[bonesTransform.Length];
         _defRot = new Quaternion[bonesTransform.Length];
-        _delta = new float[bonesTransform.Length];
-        _lastGap = new float[bonesTransform.Length];
-        _doBounce = new bool[bonesTransform.Length];
-        _rebounceDir = new Vector3[bonesTransform.Length];
-        _deltaRet = new float[bonesTransform.Length];
+        _deltaForce = new float[bonesTransform.Length];
+
         for (int i = 0; i < bonesTransform.Length; i++)
         {
             var t = bonesTransform[i];
@@ -42,12 +55,12 @@ public class FuwaFuwaMovement : UdonSharpBehaviour
             {
                 var k = 1;
                 while (bonesTransform[i - k] != t.parent) k++;
-                bonesLength[i] = bonesLength[i - k] + Vector3.Distance(t.parent.position, t.position) + 1;
+                bonesLength[i] = bonesLength[i - k] + Vector3.Distance(t.parent.position, t.position);
                 if (bonesLength[i] > maxLength) maxLength = bonesLength[i];
             }
             else
             {
-                bonesLength[i] = 1;
+                bonesLength[i] = 0;
                 _lastPos = rootBone.position;
                 _lastDir = rootBone.up;
             }
@@ -55,71 +68,67 @@ public class FuwaFuwaMovement : UdonSharpBehaviour
             _defRot[i] = t.localRotation;
         }
     }
-    [SerializeField] float _deltaAdd = 1f;
-    [SerializeField] float _tolerate = 0.5f;
-    [SerializeField] float _maxForce;
 
 
-    void Update()
+    void FixedUpdate()
     {
-        Vector3 forceDir = CaluculateSwingDirection();
-        float force = forceDir.magnitude * 10;
-        bool isDirectionChange = Vector3.Dot(_lastForceDir.normalized, forceDir.normalized) > 0.7f;
-        if (grabIndex >= 0)
+        if(!_isStraighten)
         {
-
-        }
-        else
-        {
-            for (int i = 0; i < bonesTransform.Length; i++)
+            Vector3 forceDir = CaluculateSwingDirection();
+            float force = forceDir.magnitude;
+            if (grabIndex >= 0)
             {
-                var t = bonesTransform[i];
-
-                if (force > 0.0001f && isDirectionChange) { _lastForce[i] = 0; }
-                _lastForce[i] += force / bonesLength[i];
-
-                _lastForce[i] = Mathf.Min(_tolerate, _lastForce[i]);
-                _maxForce = Mathf.Max(_maxForce, _lastForce[i]);
-
-                float forceGap = _maxForce - _lastForce[i];
-
-                Vector4 forceDir4 = forceDir.normalized * _lastForce[i];
-                forceDir4.w = i;
-                DoFuwa(forceDir4);
-
-                if (_lastGap[i] - forceGap > 0 && force > 0.0001f) { _delta[i] = _lastForce[i]; _deltaRet[i] = _lastForce[i]; _rebounceDir[i] = (_defDir[i] - t.up).normalized; _doBounce[i] = true; }
-                if (_lastGap[i] - forceGap > 0 && _delta[i] == 0) _maxForce = 0;
-                if (forceGap < 0.1f)
-                {
-                    if (_doBounce[i])
-                    {
-                        _delta[i] = Mathf.Max(0, _delta[i] - _deltaAdd);
-
-
-
-                    }
-                    if (_delta[i] == 0) { _lastForce[i] = 0; _doBounce[i] = false; }
-                    //if (i == 3) Debug.Log(_delta[i] * rebounceDir + " " + (_delta[i] * rebounceDir).magnitude);
-                    //if (i == 3) Debug.Log("delta " + _delta[i]);
-                    // if (i == 3) Debug.Log(_lastForce[i] + " " + _delta[i]);
-                    ReFuwa(_delta[i] * _rebounceDir[i], i, _deltaRet[i] - _delta[i]);
-                }
-
-                if (_lastForce[i] < _maxForce) { _lastForce[i] = Mathf.Lerp(_lastForce[i], _maxForce, 0.1f); }
-                //if (i == 3) Debug.Log(forceGap);
-
-                _lastGap[i] = forceGap;
+                FuwaFuwa(grabIndex, forceDir, force);
+            }
+            else
+            {
+                FuwaFuwa(0, forceDir, force);
             }
         }
 
         _lastPos = rootBone.position;
         _lastDir = rootBone.up;
-        _lastForceDir = forceDir;
     }
-    void FuwaFuwa()
+
+    void FuwaFuwa(in int rootIndex, in Vector3 forceDir, in float force)
     {
+        for (int i = rootIndex; i < bonesTransform.Length; i++)
+        {
+            var t = bonesTransform[i];
+
+            if (i == 0) continue;
+            _lastForce[i] = force / bonesLength[i];
+
+            Vector4 forceDir4 = ApplyDirectionalSuppression(forceDir.normalized * _lastForce[i], i);
+            forceDir4.w = i;
+
+            DoFuwa(forceDir4);
+
+            _deltaForce[i] = Vector3.Distance(t.up, _defDir[i]);
+            ReFuwa(i);
+
+        }
+    }
+
+
+
+    void DoFuwa(in Vector4 swingDir4)
+    {
+        var i = (int)swingDir4.w;
+        var t = bonesTransform[i];
+        t.localRotation = CalculateRotate(swingDir4, i);
+    }
+    void ReFuwa(in int i)
+    {
+        Transform t = bonesTransform[i];
+        float rebounceStrength = Mathf.Clamp(rebounceness.Evaluate(bonesLength[i] / maxLength), 0, 1);
+
+        Quaternion returnRot = Quaternion.RotateTowards(t.localRotation, _defRot[i], _deltaForce[i] * rebounceStrength * 10);
+
+        t.localRotation = returnRot;
 
     }
+
 
     Vector3 CaluculateSwingDirection()
     {
@@ -129,65 +138,143 @@ public class FuwaFuwaMovement : UdonSharpBehaviour
         return -swingDir;
     }
 
-    [SerializeField] float bounceness;
-    [SerializeField] AnimationCurve hardness = AnimationCurve.Constant(timeStart: 0.05f, timeEnd: 0.3f, value: 1f);
-    [SerializeField] float angleLimit = 90;
-
-    void DoFuwa(Vector4 swingDir4)
+    private Vector3 ApplyDirectionalSuppression(Vector3 originalVector, int i)
     {
-        var i = (int)swingDir4.w;
-        var t = bonesTransform[i];
-        t.localRotation = CaluculateRotate(swingDir4, i);
+        Vector3 result = originalVector;
+
+
+        for (int j = 0; j < suppressionStrengths.Length; j++)
+        {
+            Vector3 normalizedDir = Vector3.zero;
+            if (j == 0 && suppressZ) normalizedDir = bonesTransform[i].forward;
+            if (j == 1 && suppressX) normalizedDir = bonesTransform[i].right;
+            if (j == 2 && suppressY) normalizedDir = bonesTransform[i].up;
+            float dotProduct = Vector3.Dot(result, normalizedDir);
+            Vector3 componentToSuppress = normalizedDir * dotProduct;
+
+            // 抑制を適用
+            result -= componentToSuppress * suppressionStrengths[j];
+        }
+
+        // 再正規化
+        if (result.sqrMagnitude > 0.0001f)
+        {
+            result.Normalize();
+        }
+
+        return result;
     }
 
-
-    void ReFuwa(Vector3 swingDir, int i, float deltaTime)
-    {
-        Transform t = bonesTransform[i];
-        Quaternion returnRot = Quaternion.RotateTowards(t.localRotation, _defRot[i], deltaTime);
-
-        // t.localRotation =  returnRot * Quaternion.Inverse(t.localRotation) * CaluculateRotate(swingDir, i);
-        t.localRotation = returnRot;
-    }
-    Quaternion CaluculateRotate(Vector3 swingDir, int i)
+    Quaternion CalculateRotate(in Vector3 swingDir, in int i)
     {
         Transform t = bonesTransform[i];
 
-        Vector3 currentUp = t.up;
-        Vector3 targetDir = t.up + swingDir;
-        Vector3 axis = Vector3.Cross(currentUp, targetDir).normalized;
-        float hardnessStrength = hardness.Evaluate(bonesLength[i] / maxLength);
-        float angle = Vector3.SignedAngle(t.up, t.up + swingDir, axis);
-        float angleTest = Vector3.SignedAngle(rootBone.parent.rotation * _defDir[i], t.up + swingDir, axis);
-        if (Mathf.Abs(angleTest) > angleLimit) angle -= Mathf.Sign(angleTest) * (Mathf.Abs(angleTest) - angleLimit);
+        // ワールド座標系で軸と角度を計算
+        Vector3 worldAxis = Vector3.Cross(t.up, t.up + swingDir).normalized;
+        float angle = Vector3.SignedAngle(t.up, t.up + swingDir, worldAxis);
+
+        // 軸が無効な場合（平行ベクトル）は現在の回転を返す
+        if (worldAxis.sqrMagnitude < 0.001f)
+        {
+            return t.localRotation;
+        }
+
+        float hardnessStrength = 1 - Mathf.Clamp(hardness.Evaluate(bonesLength[i] / maxLength), 0, 1);
+        float al = angleLimit * Mathf.Clamp(angleLimitness.Evaluate(bonesLength[i] / maxLength), 0, 1);
+        angle = Mathf.Clamp(angle, -al, al);
+
         Quaternion fixedTwist = _defRot[i] * Quaternion.Inverse(t.localRotation);
-        fixedTwist.x = 0; fixedTwist.z = 0;
+        fixedTwist.x = 0;
+        fixedTwist.z = 0;
+        fixedTwist = fixedTwist.normalized;
         Quaternion fixedCurrentRot = fixedTwist * t.localRotation;
-        Quaternion targetRot = Quaternion.AngleAxis(angle, axis) * fixedCurrentRot;
+
+        Vector3 localAxis = t.InverseTransformDirection(worldAxis);
+
+        Quaternion localTargetRotation = Quaternion.AngleAxis(angle, localAxis);
+        Quaternion targetRot = localTargetRotation * fixedCurrentRot;
 
         return Quaternion.Slerp(fixedCurrentRot, targetRot, hardnessStrength);
     }
 
-    int grabIndex = -1;
-    public void SetHold(Transform glabedTransform, Vector3 glabPos, Quaternion glabRot)
-    {
-        if (grabIndex < 0)
-            for (int i = 0; i < bonesTransform.Length; i++)
-                if (bonesTransform[i] == glabedTransform) { grabIndex = i; break; }
 
-    }
-    public void SetHold(Transform glabedTransform, Vector3 glabPos)
+    public void SetHold(in Vector3 glabPos, in Transform glabHand)
     {
+        _isHold = true;
         if (grabIndex < 0)
-            for (int i = 0; i < bonesTransform.Length; i++)
-                if (bonesTransform[i] == glabedTransform) { grabIndex = i; break; }
-
+            for (int i = 0; i < grabPoint.Length; i++)
+            {
+                if ((grabPoint[i].position - glabPos).sqrMagnitude < glabDistance * glabDistance)
+                {
+                    for (int j = 0; j < bonesTransform.Length; i++)
+                        if (grabPoint[i] == bonesTransform[j])
+                        {
+                            grabIndex = j;
+                            break;
+                        }
+                    break;
+                }
+            }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.layer == 26)
+        {
+            for(int i = 0; i< grabPoint.Length; i++)
+            {
+                if((other.bounds.center- grabPoint[i].position).sqrMagnitude < glabDistance)
+                { SetGrabIndex(i); break; }
+            }
+            
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.layer == 26)
+        {
+            for (int i = 0; i < grabPoint.Length; i++)
+            {
+                if ((other.bounds.center - grabPoint[i].position).sqrMagnitude < glabDistance)
+                {  break; }
+                if (i == grabPoint.Length - 1) SetRelease();
+            }
+
+        }
+    }
+    bool _isStraighten;
+    private void OnCollisionEnter(Collision collision)
+    {
+        _isStraighten = true;
+        DoStraighten();
+    }
+    void SetGrabIndex(in int index)
+    {
+        for (int i = 0; i < bonesTransform.Length; i++)
+        {
+            if (grabPoint[index] == bonesTransform[i])
+            {
+                grabIndex = i;
+                break;
+            }
+        }
+    }
+    bool _isHold;
     public void SetRelease()
     {
         grabIndex = -1;
     }
+
+
+
+    public void DoStraighten()
+    {
+        for (int i = 0; i < bonesTransform.Length; i++)
+        {
+            bonesTransform[i].localRotation = _defRot[i];
+            if(i == bonesLength.Length-1) _isStraighten = false;
+        }
+    }
+
 }
-
-
 
