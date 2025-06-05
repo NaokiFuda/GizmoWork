@@ -18,8 +18,9 @@ public class CallMethod : UdonSharpBehaviour
 
     Collider buttonCollider;
     Vector3 _defPos;
-    bool _released = true;
+    bool _released;
     [SerializeField] bool allowHold;
+    [SerializeField] bool allow;
     private void Start()
     {
         _defPos = transform.localPosition;
@@ -41,10 +42,7 @@ public class CallMethod : UdonSharpBehaviour
     {
         for (int i = 0; i < signals.Length; i++)
         {
-            if (isLocal)
                 signals[i].SendCustomEvent(methodNames[i]);
-            else
-                signals[i].SendCustomNetworkEvent(NetworkEventTarget.All, methodNames[i]);
         }
     }
 
@@ -55,6 +53,8 @@ public class CallMethod : UdonSharpBehaviour
         VRCPlayerApi player = Networking.GetOwner(other.gameObject);
         if (player.isLocal && isPushButton)
         {
+            if (!_released && allowHold) _released = true;
+
             Vector3 rightpos = player.GetTrackingData(VRCPlayerApi.TrackingDataType.RightHand).position;
             Vector3 leftpos = player.GetTrackingData(VRCPlayerApi.TrackingDataType.LeftHand).position;
             if (buttonCollider.bounds.Contains(rightpos))
@@ -83,9 +83,8 @@ public class CallMethod : UdonSharpBehaviour
     void OnTriggerExit(Collider other)
     {
         if (other.gameObject.layer != 26) return;
-        VRCPlayerApi player = Networking.GetOwner(other.gameObject);
 
-        if (player.isLocal && isPushButton)
+        if (isPushButton)
         {
             if(transform.localPosition.y < _defPos.y)  _released = true;
         }
@@ -93,7 +92,6 @@ public class CallMethod : UdonSharpBehaviour
     }
     private void Update()
     {
-        if(_released && transform.localPosition.y <= _defPos.y) transform.localPosition += transform.up * 0.1f;
-        if (allowHold && _defPos.y - transform.localPosition.y >= pressThreshold) Activate();
+        if(_released && transform.localPosition.y < _defPos.y) transform.localPosition += transform.up * 0.1f;
     }
 }

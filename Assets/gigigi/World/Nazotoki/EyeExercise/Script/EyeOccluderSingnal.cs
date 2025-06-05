@@ -12,19 +12,47 @@ public class EyeOccluderSingnal : UdonSharpBehaviour
     [SerializeField] PlayerRayManager playerRayManager;
     [SerializeField] string methodName = "Active";
     [SerializeField] UdonBehaviour target;
+    bool _isFocus;
+    Vector3 _lastPos;
+    [SerializeField] float threshold = 0.08f;
+    [SerializeField] FitSightAndFade effectScript;
+    float _timer ;
     void Update()
     {
         if (pickup != null && pickup.IsHeld && pickup.currentPlayer == Networking.LocalPlayer)
         {
-            float eyeHeight = Networking.LocalPlayer.GetTrackingData(VRCPlayerApi.TrackingDataType.Head).position.y;
-            if(Mathf.Abs(eyeHeight - eyeLevel.position.y) < 0.1f)
+            Ray ray = playerRayManager.GetPlayerRay();
+            if (!_isFocus && Physics.Raycast(ray, out RaycastHit hit, 10f, 1 << 27) && hit.collider.gameObject.layer == 27 && hit.distance > 1 
+            && Vector3.Dot((transform.position - Networking.LocalPlayer.GetTrackingData(VRCPlayerApi.TrackingDataType.Head).position).normalized, ray.direction) > 0.98f)
             {
-                Ray ray = playerRayManager.GetPlayerRay();
-                if(Physics.Raycast(ray, out RaycastHit hit, 10f, 1 << 27) && hit.collider.gameObject.layer == 27)
+                _isFocus = true;
+                effectScript.Activate();
+                _timer = 0;
+            }
+
+        }
+        if(_isFocus && pickup.IsHeld)
+        {
+            _timer += Time.deltaTime;
+            if (_timer < 1) return;
+
+            Vector3 dir = transform.position - _lastPos;
+            if (dir.sqrMagnitude > 0.0001f)
+            {
+                float dot = Vector3.Dot(dir.normalized, Vector3.up);
+                if (dot > threshold) 
                 {
+                    _isFocus = false;
+                    pickup.Drop();
                     target.SendCustomEvent(methodName);
                 }
             }
+            _lastPos = transform.position;
         }
+        
+    }
+    public override void InputDrop(bool value, UdonInputEventArgs args)
+    {
+        if(!value)_isFocus = false;
     }
 }

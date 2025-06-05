@@ -1,6 +1,7 @@
 ﻿
 using UdonSharp;
 using UnityEngine;
+using UnityEngine.InputSystem.Controls;
 using VRC.SDKBase;
 using VRC.Udon;
 
@@ -48,11 +49,13 @@ public class RatRogics : UdonSharpBehaviour
         if(_following && !_idling)
         {
             _timer = 0;
-            if (Vector3.Distance(_target.position,transform.position) < stayRange)
+            float targetDistance = Vector3.Distance(_target.position, transform.position);
+            if (targetDistance < stayRange)
             {
                 animator.SetBool("idle", true);
                 _idling = true;
             }
+            if (targetDistance > 10f) _idling = true;
         }
         if(_idling)
         {
@@ -75,15 +78,30 @@ public class RatRogics : UdonSharpBehaviour
     float _stackTimer;
     bool _jump;
     float _jumpTimer;
+    float lookAngle;
+    float bodyAngle;
     private void FixedUpdate()
     {
         if (_following && !_idling) 
         {
-            //animator.SetFloat("lookAngle", lookAngle);
-            Quaternion targetRot = Quaternion.LookRotation(ratHead.rotation * ratHead.forward);
-            targetRot.x = 0f; targetRot.z = 0f;
-            Debug.Log(targetRot);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRot, 0.05f);
+            
+            Vector3 direction = (_target.position - transform.position).normalized; 
+
+            float signedAngle = Vector3.SignedAngle(transform.forward, direction, Vector3.up);
+            
+            if (signedAngle < -20) lookAngle -= 1f * Time.fixedDeltaTime;
+            else if(signedAngle > 20) lookAngle += 1f * Time.fixedDeltaTime;
+
+            lookAngle = Mathf.Clamp(lookAngle,-1,1);
+
+            animator.SetFloat("lookAngle", lookAngle);
+
+            float angle = Vector3.SignedAngle(transform.forward, ratHead.forward, Vector3.up);
+
+            if (angle < -10) bodyAngle -= 0.5f * Time.fixedDeltaTime;
+            else if (angle > 10) bodyAngle += 0.5f * Time.fixedDeltaTime;
+            transform.rotation = Quaternion.AngleAxis(bodyAngle, Vector3.up);
+
             Vector3 force = transform.forward * speed * rb.mass / Time.fixedDeltaTime;
             force.y = 0;
             rb.AddForce(force);
@@ -119,7 +137,7 @@ public class RatRogics : UdonSharpBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.layer == 4)
+        if(other.gameObject.layer == 28)
         {
             _idling = true;
             animator.SetBool("idle", true);
