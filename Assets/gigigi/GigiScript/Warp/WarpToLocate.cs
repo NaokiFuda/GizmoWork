@@ -8,7 +8,7 @@ public class WarpToLocate : UdonSharpBehaviour
 {
     [SerializeField] Transform target;
 
-    void Activate()
+    public void Activate()
     {
         Networking.LocalPlayer.TeleportTo(target.position, target.rotation);
     }

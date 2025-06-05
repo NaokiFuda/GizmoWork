@@ -3,9 +3,9 @@ guid: abd0528efaad789429bcefc50005514c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 13
+  serializedVersion: 12
   mipmaps:
-    mipMapMode: 0
+    mipMapMode: 1
     enableMipMap: 1
     sRGBTexture: 0
     linearTexture: 0
