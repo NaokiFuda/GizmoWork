@@ -14,6 +14,9 @@ public class FitSightAndFade : UdonSharpBehaviour
     [SerializeField] float maxDistance = 1f;
      bool _effectWorked;
     public bool GetEffectWorked() {  return _effectWorked; }
+
+    bool _effectFinished;
+    public bool GetEffectFinished() { return _effectFinished; }
     public void Activate()
     {
         RaycastHit hit;
@@ -36,8 +39,9 @@ public class FitSightAndFade : UdonSharpBehaviour
         _alpha = 1f;
         image.color = new Color(1, 1, 1, 1);
         audioSource.Play();
-        Debug.Log(audioSource.isPlaying);
+        //Debug.Log(audioSource.isPlaying);
         //_isFading = true; ; return;
+        _effectWorked = true;
         if (IsObjectInView(gameObject, mainCamera)) _isFading = true; 
         else AdjastObjInView();
     }
@@ -94,7 +98,7 @@ public class FitSightAndFade : UdonSharpBehaviour
                 {
                     _alpha = 0;
                     _isFading = false;
-                    _effectWorked = true;
+                    _effectFinished = true;
                 }
 
                 image.color = new Color(1, 1, 1, _alpha);
