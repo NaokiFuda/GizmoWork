@@ -1,5 +1,6 @@
 ﻿
 
+using TMPro;
 using UdonSharp;
 using UnityEngine;
 using VRC.Core;
@@ -10,8 +11,11 @@ using VRC.Udon.Common;
 public class EyeExerciseManager : UdonSharpBehaviour
 {
     [SerializeField] float[] randomSpeeds;
+    [SerializeField] float knockBackSpeed= 2f;
     [SerializeField] GameObject targetPrefab;
     [SerializeField] Transform startPoint;
+    [SerializeField] TextMeshProUGUI scoreDisplay;
+    int _score;
     [SerializeField] EyeSightPointer eyeSightPointer;
     [SerializeField] public Transform popArea;
     [SerializeField] float delayTime = 1f;
@@ -51,7 +55,7 @@ public class EyeExerciseManager : UdonSharpBehaviour
 
         for (int i = 0; i < _targets.Length; i ++)
         {
-            if (_targetedTargetIndexs[i])
+            if (_targetedTargetIndexs[i] && !_knockedTargetIndexs[i])
             {
                 if (!inputHandIsLeft[i])
                 {
@@ -73,8 +77,6 @@ public class EyeExerciseManager : UdonSharpBehaviour
                     }
                     
                 }
-
-                
             }
             if (_knockedTargetIndexs[i] &&_targets[i].transform.localPosition.z - popArea.localPosition.z < 0)
             {
@@ -90,20 +92,20 @@ public class EyeExerciseManager : UdonSharpBehaviour
     [SerializeField] AnimationCurve spawnDifficultyCurve = AnimationCurve.EaseInOut(timeStart: 0f, valueStart: 1f, timeEnd: 60f, valueEnd: 60f);
     void InitilizeTarget(in int i)
     {
+        if (_knockedTargetIndexs[i]) _score++;
         _knockedTargetIndexs[i] = false;
-
         setedSpeed[i] = randomSpeeds[Random.Range(0, randomSpeeds.Length-1)];
         _targetDir[i] = _directionList[Random.Range(0, 3)];
         _targets[i].transform.GetChild(0).rotation = Quaternion.FromToRotation(_targets[i].transform.GetChild(0).right, _targetDir[i]) * _targets[i].transform.GetChild(0).rotation;
         var scale = 0.3f / spawnDifficultyCurve.Evaluate(_timer);
-        _targets[i].transform.GetChild(0).localScale = Vector3.one * Random.Range(scale, scale + 0.03f);
-        
+        _targets[i].transform.GetChild(0).localScale = Vector3.one * Random.Range(scale, scale + scale / 2);
+        scoreDisplay.text = "0"+_score ;
     }
 
     void MoveTarget(in Transform target, in int i)
     {
         float speed = setedSpeed[i];
-        if (_knockedTargetIndexs[i]) speed = -randomSpeeds[randomSpeeds.Length-1];
+        if (_knockedTargetIndexs[i]) speed = -knockBackSpeed;
 
         target.position += target.forward * speed * Time.deltaTime * 100f;
     }
@@ -142,10 +144,11 @@ public class EyeExerciseManager : UdonSharpBehaviour
     } 
     public void InitilizeGame()
     {
+        _score = 0;
         _timer = 0;
         eyeSightPointer.enabled = true;
         _isgameStart = true;
-        for (int i = 0; i < _targets.Length; i++) { InitilizeTarget(i); _targets[i].transform.position = new Vector3(_targets[i].transform.position.x, _targets[i].transform.position.y, popArea.position.z); }
+        for (int i = 0; i < _targets.Length; i++) { _knockedTargetIndexs[i] = false; InitilizeTarget(i); _targets[i].transform.position = popArea.position + popArea.right * i * 2;  }
     }
 
     public void SetGameFinish()
