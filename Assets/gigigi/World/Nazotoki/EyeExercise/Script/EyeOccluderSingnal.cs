@@ -14,7 +14,7 @@ public class EyeOccluderSingnal : UdonSharpBehaviour
     [SerializeField] UdonBehaviour target;
     bool _isFocus;
     Vector3 _lastPos;
-    [SerializeField] float threshold = 0.08f;
+    [SerializeField] float threshold = 0.05f;
     [SerializeField] FitSightAndFade effectScript;
     float _timer ;
     void Update()
@@ -22,24 +22,26 @@ public class EyeOccluderSingnal : UdonSharpBehaviour
         if (pickup != null && pickup.IsHeld && pickup.currentPlayer == Networking.LocalPlayer)
         {
             Ray ray = playerRayManager.GetPlayerRay();
-            if (!_isFocus && Physics.Raycast(ray, out RaycastHit hit, 10f, 1 << 27) && hit.collider.gameObject.layer == 27 && hit.distance > 1 
-            && Vector3.Dot((transform.position - Networking.LocalPlayer.GetTrackingData(VRCPlayerApi.TrackingDataType.Head).position).normalized, ray.direction) > 0.98f)
+            if (!_isFocus && Physics.Raycast(ray, out RaycastHit hit, 10f, 1 << 27) && hit.distance > 0.5f)
             {
+                if (Networking.LocalPlayer.IsUserInVR() && Vector3.Distance(transform.position, Networking.LocalPlayer.GetTrackingData(VRCPlayerApi.TrackingDataType.Head).position) >= 0.1f) return;
                 _isFocus = true;
+                _lastPos = transform.position;
                 effectScript.Activate();
                 _timer = 0;
+                
             }
 
         }
         if(_isFocus && pickup.IsHeld)
         {
             _timer += Time.deltaTime;
-            if (_timer < 1) return;
+            if (_timer < 1.5f) return;
 
             Vector3 dir = transform.position - _lastPos;
             if (dir.sqrMagnitude > 0.0001f)
             {
-                float dot = Vector3.Dot(dir.normalized, Vector3.up);
+                float dot = Vector3.Dot(dir, Vector3.up);
                 if (dot > threshold) 
                 {
                     _isFocus = false;

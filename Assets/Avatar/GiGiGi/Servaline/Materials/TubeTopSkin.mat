@@ -379,7 +379,7 @@ Material:
     - _EmissionBlendMode: 1
     - _EmissionFluorescence: 0
     - _EmissionGradSpeed: 1
-    - _EmissionMainStrength: 0
+    - _EmissionMainStrength: 0.636
     - _EmissionMap_UVMode: 0
     - _EmissionParallaxDepth: 0
     - _EmissionUseGrad: 0

@@ -379,7 +379,7 @@ Material:
     - _EmissionBlendMode: 1
     - _EmissionFluorescence: 0
     - _EmissionGradSpeed: 1
-    - _EmissionMainStrength: 0
+    - _EmissionMainStrength: 0.486
     - _EmissionMap_UVMode: 0
     - _EmissionParallaxDepth: 0
     - _EmissionUseGrad: 0
@@ -694,7 +694,7 @@ Material:
     - _Emission2ndMap_ScrollRotate: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionBlendMask_ScrollRotate: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionBlink: {r: 0, g: 0, b: 3.141593, a: 0}
-    - _EmissionColor: {r: 0.5283019, g: 0.5283019, b: 0.5283019, a: 1}
+    - _EmissionColor: {r: 0.4811321, g: 0.4811321, b: 0.4811321, a: 1}
     - _EmissionMap_ScrollRotate: {r: 0, g: 0, b: 0, a: 0}
     - _GlitterAtras: {r: 1, g: 1, b: 0, a: 0}
     - _GlitterColor: {r: 1, g: 1, b: 1, a: 1}
