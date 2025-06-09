@@ -19,7 +19,7 @@ public class EyeExerciseManager : UdonSharpBehaviour
     [SerializeField] EyeSightPointer eyeSightPointer;
     [SerializeField] public Transform popArea;
     [SerializeField] float delayTime = 1f;
-    [SerializeField] float threshold = 0.08f;
+    [SerializeField] float threshold = 0.05f;
     GameObject[] _targets = new GameObject[3];
     float[] setedSpeed;
     bool[] _targetedTargetIndexs;
