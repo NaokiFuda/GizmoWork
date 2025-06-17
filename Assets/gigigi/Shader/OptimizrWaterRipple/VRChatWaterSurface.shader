@@ -87,11 +87,18 @@ Shader "Custom/VRChatWaterSurface"
             finalNormal.xy += rippleOffset;
             finalNormal = normalize(finalNormal);
             
-            // Refraction effect using grab pass
+            // Fixed refraction effect using grab pass with division by zero protection
             float4 screenPos = IN.screenPos;
             float2 refractionOffset = finalNormal.xy * _RefractionStrength;
-            screenPos.xy = screenPos.xy / screenPos.w + refractionOffset;
-            fixed4 refractionColor = tex2D(_GrabTexture, screenPos.xy);
+            
+            // Protect against division by zero
+            float w = max(screenPos.w, 0.001);
+            float2 screenUV = screenPos.xy / w + refractionOffset;
+            
+            // Clamp UV coordinates to prevent sampling outside texture bounds
+            screenUV = clamp(screenUV, 0.0, 1.0);
+            
+            fixed4 refractionColor = tex2D(_GrabTexture, screenUV);
             
             // Main texture with animated flow
             fixed4 c = tex2D(_MainTex, IN.uv_MainTex + finalNormal.xy * 0.05);
