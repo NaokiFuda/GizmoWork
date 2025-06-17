@@ -1,0 +1,226 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: waterSurface 1
+  m_Shader: {fileID: 4800000, guid: ee454daa80fa5c546b7e9208babab4b2, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 1
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: b382f008d22f63c4aa7fbe879366a5e6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormal:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FlowMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _InteractionPoints:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NoiseMap:
+        m_Texture: {fileID: 2800000, guid: 1ecad74946662c14392764e6485e53a4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 2800000, guid: 40c031fa9d5bafb4c9d594ad4936f377, type: 3}
+        m_Scale: {x: 0.5, y: 0.5}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _RoughnessMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _WaveDataTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _BumpScale: 1
+    - _CellBorderSize: 0.05
+    - _CellSize: 8.1
+    - _CollisionCount: 0
+    - _CollisionStrengths_0: 0
+    - _CollisionStrengths_1: 0
+    - _CollisionStrengths_2: 0
+    - _CollisionStrengths_3: 0
+    - _CollisionStrengths_4: 0
+    - _CollisionStrengths_5: 0
+    - _CollisionStrengths_6: 0
+    - _CollisionStrengths_7: 0
+    - _CollisionStrengths_8: 0
+    - _CollisionStrengths_9: 0
+    - _ColorVariation: 0.5
+    - _Cutoff: 0.5
+    - _DepthDistance: 1.44
+    - _DepthFade: 2.76
+    - _DepthFadeDistance: 3
+    - _DetailNormalMapScale: 1
+    - _DetailNormalStrength: 0.5
+    - _Distortion: 1
+    - _DistortionStrength: 0.18
+    - _DstBlend: 0
+    - _FallbackNoise: 1
+    - _FlowSpeed: 0.1
+    - _FlowStrength: 0.2
+    - _FluidSmoothing: 0.3
+    - _FoamWidth: 0.016
+    - _GlossMapScale: 1
+    - _GlossVariation: 0.1
+    - _Glossiness: 0.808
+    - _GlossyReflections: 1
+    - _InteractionCount: 0
+    - _InteractionDecay: 0.1
+    - _InteractionMosaicDensity: 100
+    - _InteractionRadius: 0.1
+    - _InteractionStrength: 0
+    - _LastRandomWaveTime: 0
+    - _MaxWaves: 20
+    - _Metallic: 0.987
+    - _MetallicVariation: 0.2
+    - _Mode: 0
+    - _MosaicDensity: 4.8
+    - _MosaicSize: 1
+    - _NormalStrength: 1.638
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _RandomWaveInterval: 5.58
+    - _RefractionStrength: 1
+    - _RippleAmplitude: 0.2
+    - _RippleCount: 5
+    - _RippleDecay: 0.9
+    - _RippleDensity: 10
+    - _RippleFade: 2
+    - _RipplePositionX0: 0
+    - _RipplePositionX1: 0
+    - _RipplePositionX2: 0
+    - _RipplePositionX3: 0
+    - _RipplePositionX4: 0
+    - _RipplePositionY0: 0
+    - _RipplePositionY1: 0
+    - _RipplePositionY2: 0
+    - _RipplePositionY3: 0
+    - _RipplePositionY4: 0
+    - _RipplePositionZ0: 0
+    - _RipplePositionZ1: 0
+    - _RipplePositionZ2: 0
+    - _RipplePositionZ3: 0
+    - _RipplePositionZ4: 0
+    - _RippleRadius: 5
+    - _RippleScale: 1.71
+    - _RippleSpeed: 0.55
+    - _RippleSpread: 2
+    - _RippleStrength: 3.31
+    - _RippleTime0: 0
+    - _RippleTime1: 0
+    - _RippleTime2: 0
+    - _RippleTime3: 0
+    - _RippleTime4: 0
+    - _SmoothingFactor: 0.328
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SpecularIntensity: 1.35
+    - _SpecularPower: 25.8
+    - _SplashThreshold: 6.06
+    - _SrcBlend: 1
+    - _StainedGlassIntensity: 0.5
+    - _TileSize: 100
+    - _TimeValue: 13.730329
+    - _UVSec: 0
+    - _UseFallback: 0
+    - _WaterDepth: 2.05
+    - _WaterHeight: 0.518
+    - _WaveAmplitude: 0
+    - _WaveCount: 35
+    - _WaveDecay: 1.66
+    - _WaveDensity: 10
+    - _WaveFade: 5
+    - _WaveFrequency: 3
+    - _WaveHeight: 0
+    - _WaveLifetime: 6.12
+    - _WaveRadius: 7.38
+    - _WaveScale: 0.91
+    - _WaveSpeed: 0.18
+    - _WaveSpread: 9.67
+    - _WaveStrength: 1
+    - _WaveThickness: 0.561
+    - _ZWrite: 1
+    m_Colors:
+    - _BorderColor: {r: 0, g: 0, b: 0, a: 1}
+    - _CollisionPoints_0: {r: 0, g: 0, b: 0, a: 0}
+    - _CollisionPoints_1: {r: 0, g: 0, b: 0, a: 0}
+    - _CollisionPoints_2: {r: 0, g: 0, b: 0, a: 0}
+    - _CollisionPoints_3: {r: 0, g: 0, b: 0, a: 0}
+    - _CollisionPoints_4: {r: 0, g: 0, b: 0, a: 0}
+    - _CollisionPoints_5: {r: 0, g: 0, b: 0, a: 0}
+    - _CollisionPoints_6: {r: 0, g: 0, b: 0, a: 0}
+    - _CollisionPoints_7: {r: 0, g: 0, b: 0, a: 0}
+    - _CollisionPoints_8: {r: 0, g: 0, b: 0, a: 0}
+    - _CollisionPoints_9: {r: 0, g: 0, b: 0, a: 0}
+    - _Color: {r: 0.76094687, g: 0.9433962, b: 0.90222013, a: 0.6509804}
+    - _DeepColor: {r: 0.14257741, g: 0.24339129, b: 0.33962262, a: 0.4117647}
+    - _DepthColor: {r: 0.16976675, g: 0.19938096, b: 0.3301886, a: 0.84313726}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _FoamColor: {r: 1, g: 1, b: 1, a: 0.8}
+    - _MeshBounds: {r: 0, g: 0, b: 0, a: 0}
+    - _ShallowColor: {r: 0.39999998, g: 0.8, b: 1, a: 0.7}
+    - _SpecColor: {r: 0.76161444, g: 0.990566, b: 0.9596266, a: 1}
+    - _WaveOffsets: {r: 0.060312934, g: 0.046545494, b: 0.12115212, a: -0.32409313}
+  m_BuildTextureStacks: []
