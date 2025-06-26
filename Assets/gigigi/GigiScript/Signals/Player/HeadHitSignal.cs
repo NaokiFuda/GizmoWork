@@ -40,6 +40,16 @@ public class HeadHitSignal : UdonSharpBehaviour
             SendSignals();
         }
     }
+    public override void OnPlayerTriggerExit(VRCPlayerApi player)
+    {
+        if (player != Networking.LocalPlayer) return;
+
+        if (stayInTrigger)
+        {
+            stayInTrigger = false;
+            SendSignals();
+        }
+    }
 
     void SendSignals()
     {

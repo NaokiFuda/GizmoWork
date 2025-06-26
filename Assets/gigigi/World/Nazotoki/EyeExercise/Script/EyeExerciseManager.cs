@@ -25,6 +25,8 @@ public class EyeExerciseManager : UdonSharpBehaviour
     bool[] _targetedTargetIndexs;
     bool[] _knockedTargetIndexs;
     Vector3[] _directionList;
+    Vector3[] _inverseDirList;
+    Vector3[] _inverseTargetDIr;
     Vector3[] _targetDir;
     Vector3[] _lasthandPos = new Vector3[2];
     bool[] inputHandIsLeft;
@@ -37,6 +39,8 @@ public class EyeExerciseManager : UdonSharpBehaviour
         _knockedTargetIndexs = new bool[_targets.Length];
         _targetedTargetIndexs = new bool[_targets.Length];
         _directionList = new Vector3[4] { targetPrefab.transform.GetChild(0).up, targetPrefab.transform.GetChild(0).right, -targetPrefab.transform.GetChild(0).up, -targetPrefab.transform.GetChild(0).right };
+        _inverseDirList = new Vector3[4] { Vector3.up, Vector3.right, -Vector3.up, -Vector3.right };
+        _inverseTargetDIr = new Vector3[_targets.Length];
         _targetDir = new Vector3[_targets.Length];
         inputHandIsLeft = new bool[_targets.Length];
 
@@ -63,8 +67,15 @@ public class EyeExerciseManager : UdonSharpBehaviour
                     
                     if (dir.sqrMagnitude > 0.0001f )
                     {
-                        float dot = Vector3.Dot(dir, _targetDir[i]);
-                        if (dot > threshold) { _knockedTargetIndexs[i] = true; }
+                        Vector3 aimDir = Vector3.zero;
+
+                        float dot = 0;
+
+                        aimDir = Quaternion.Inverse(Networking.LocalPlayer.GetRotation()) * dir;
+                        if (Mathf.Max(Mathf.Abs(aimDir.x), Mathf.Abs(aimDir.y)) == Mathf.Abs(aimDir.x)) aimDir =  (Vector3.left * Mathf.Sign(aimDir.x));
+                        else aimDir = (Vector3.up * Mathf.Sign(aimDir.y));
+
+                        if (aimDir == _inverseTargetDIr[i]) { _knockedTargetIndexs[i] = true; }
                     }
                 }
                 else
@@ -95,7 +106,9 @@ public class EyeExerciseManager : UdonSharpBehaviour
         if (_knockedTargetIndexs[i]) _score++;
         _knockedTargetIndexs[i] = false;
         setedSpeed[i] = randomSpeeds[Random.Range(0, randomSpeeds.Length-1)];
-        _targetDir[i] = _directionList[Random.Range(0, 3)];
+        int romDirSeed = Random.Range(0, _directionList.Length-1);
+        _targetDir[i] = _directionList[romDirSeed];
+        _inverseTargetDIr[i] = _inverseDirList[romDirSeed];
         _targets[i].transform.GetChild(0).rotation = Quaternion.FromToRotation(_targets[i].transform.GetChild(0).right, _targetDir[i]) * _targets[i].transform.GetChild(0).rotation;
         var scale = 0.3f / spawnDifficultyCurve.Evaluate(_timer);
         _targets[i].transform.GetChild(0).localScale = Vector3.one * Random.Range(scale, scale + scale / 2);

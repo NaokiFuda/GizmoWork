@@ -67,7 +67,6 @@ public class GimmicSignal : UdonSharpBehaviour
                     int i = 0;
                     if (targets.Length > 1)
                         i = Random.Range(0, targets.Length - 1);
-
                     Networking.LocalPlayer.TeleportTo(telepotTo[i].position, telepotTo[i].rotation);
                 }
                 timer = 0;

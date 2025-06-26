@@ -20,7 +20,7 @@ public class PlayerMovementSetter : UdonSharpBehaviour
     [SerializeField] UdonBehaviour[] trigerActions;
     [SerializeField] String[] actionsName;
     [SerializeField] float waterDepth = 0.1f;
-    [SerializeField] float flictionFactor = 0.1f;
+    [SerializeField] float fliction = 0.01f;
 
     bool trigerJump = false;
     Vector2 inputMovement;
@@ -43,8 +43,16 @@ public class PlayerMovementSetter : UdonSharpBehaviour
         if (localPlayer.GetGravityStrength() == worldSettings.gravity) localPlayer.SetGravityStrength(gravity);
         else localPlayer.SetGravityStrength(worldSettings.gravity);
     }
-    Vector3 lastPos;
-    float fliction;
+
+    public void Deactivate()
+    {
+        VRCPlayerApi localPlayer = Networking.LocalPlayer;
+        if (localPlayer == null) return;
+        localPlayer.SetJumpImpulse(worldSettings.jump);
+        localPlayer.SetWalkSpeed(worldSettings.walkSpeed);
+        localPlayer.SetRunSpeed(worldSettings.runSpeed);
+        localPlayer.SetGravityStrength(worldSettings.gravity);
+    }
     public void OnPlayerStay(VRCPlayerApi player)
     {
         if (player.isLocal)
@@ -61,18 +69,14 @@ public class PlayerMovementSetter : UdonSharpBehaviour
             else
             {
                 if (massHeight < 0) massHeight = 0;
-                floatVel = Vector3.up * gravity*2 * massHeight * massHeight * massHeight;
-
+                if(massHeight > waterDepth)
+                floatVel = Vector3.up * massHeight;
+                if (massHeight > 5) return;
             }
             var velocity = player.GetVelocity();
-            velocity.y = Mathf.Min(0, velocity.y) / 1.02f;
-            velocity *= 1.01f;
-            var force = velocity.magnitude;
-            fliction = Mathf.Lerp(fliction, force, flictionFactor * Time.deltaTime);
-            var flictionVel = velocity.normalized * fliction;
-            flictionVel.y = 0;
-            player.SetVelocity(velocity - flictionVel+ floatVel);
-            if(force < 0.01f) fliction = 0;
+            velocity.y = Mathf.Min(0, velocity.y);
+            velocity = Vector3.Lerp(velocity, Vector3.zero , fliction);
+            if (velocity.sqrMagnitude <= 3) player.SetVelocity(velocity +  floatVel);
 
             if (trigerJump)
             {
@@ -106,7 +110,6 @@ public class PlayerMovementSetter : UdonSharpBehaviour
         if (player.isLocal)
         {
             _doSink = false;
-            
         }
     }
 
