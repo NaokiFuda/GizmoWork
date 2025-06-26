@@ -27,5 +27,8 @@ public class ActivateRenderer : UdonSharpBehaviour
             _activateRenderer.SendCustomNetworkEvent(NetworkEventTarget.All , "Activate");
         }
     }
-
+    public void Deactivate()
+    {
+        _renderer.enabled = false;
+    }
 }

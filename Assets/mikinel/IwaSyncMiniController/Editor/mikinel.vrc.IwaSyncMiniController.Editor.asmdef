@@ -1,0 +1,22 @@
+{
+    "name": "mikinel.vrc.IwaSyncMiniController.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:ea16a9976353b2a458b910ac22a16961",
+        "GUID:2ea38240a9fc74b40b7bc09442591120",
+        "GUID:62a6844594b186347bf34f13906731c2",
+        "GUID:99835874ee819da44948776e0df4ff1d",
+        "GUID:3c1bc1267eab5884ebe7f232c09ee0d9"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

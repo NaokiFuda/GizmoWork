@@ -21,9 +21,9 @@ public class HeadDeny : UdonSharpBehaviour
         if (myColloder.bounds.Contains(playerHead.position))
         {
             var aimPos = playerData.GetPosition();
-            var startPos = myColloder.bounds.ClosestPoint(playerHead.position);
-            aimPos.y = startPos.y;
-            playerData.SetVelocity(aimPos - startPos);
+            var startPos = playerHead.position;
+            startPos.y = aimPos.y;
+            playerData.TeleportTo(aimPos - startPos + aimPos, playerData.GetRotation());
         }
     }
 }

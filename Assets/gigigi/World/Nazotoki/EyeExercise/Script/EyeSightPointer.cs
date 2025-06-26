@@ -28,7 +28,7 @@ public class EyeSightPointer : UdonSharpBehaviour
             Ray ray = playerRayManager.GetPlayerRay();
             RaycastHit hit;
 
-                if (Physics.Raycast(ray, out hit , _maxDistance, 1 << 27) && hit.collider.gameObject.name.Contains("Target"))
+                if (Physics.SphereCast(ray, 0.2f, out hit , _maxDistance, 1 << 27) && hit.collider.gameObject.name.Contains("Target"))
                     eyeExerciseManager.KnockBackTarget(hit.collider.transform, args);
         }
         else
