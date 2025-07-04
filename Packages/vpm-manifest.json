@@ -3,11 +3,11 @@
     "com.vrchat.core.vpm-resolver": {
       "version": "0.1.29"
     },
-    "com.vrchat.worlds": {
-      "version": "3.8.1"
-    },
     "jp.lilxyzw.liltoon": {
       "version": "1.10.3"
+    },
+    "com.mimylab.fukuroudon": {
+      "version": "3.8.0"
     }
   },
   "locked": {
@@ -15,18 +15,24 @@
       "version": "0.1.29",
       "dependencies": {}
     },
-    "com.vrchat.worlds": {
-      "version": "3.8.1",
+    "jp.lilxyzw.liltoon": {
+      "version": "1.10.3"
+    },
+    "com.mimylab.fukuroudon": {
+      "version": "3.8.0",
       "dependencies": {
-        "com.vrchat.base": "3.8.1"
+        "com.vrchat.worlds": "^3.8.2"
+      }
+    },
+    "com.vrchat.worlds": {
+      "version": "3.8.2",
+      "dependencies": {
+        "com.vrchat.base": "3.8.2"
       }
     },
     "com.vrchat.base": {
-      "version": "3.8.1",
+      "version": "3.8.2",
       "dependencies": {}
-    },
-    "jp.lilxyzw.liltoon": {
-      "version": "1.10.3"
     }
   }
 }
