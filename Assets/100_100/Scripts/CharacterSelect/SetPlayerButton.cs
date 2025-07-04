@@ -6,8 +6,9 @@ using VRC.Udon;
 
 public class SetPlayerButton : UdonSharpBehaviour
 {
-    void Start()
+    public ImmersiveCore immersiveCore;
+    public override void Interact()
     {
-        
+       Debug.Log(immersiveCore.GetPlayersName[0]);
     }
 }
