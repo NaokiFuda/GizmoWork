@@ -6,6 +6,9 @@
     "jp.lilxyzw.liltoon": {
       "version": "1.10.3"
     },
+    "com.vrchat.worlds": {
+      "version": "3.8.2"
+    },
     "com.mimylab.fukuroudon": {
       "version": "3.8.0"
     }
@@ -18,12 +21,6 @@
     "jp.lilxyzw.liltoon": {
       "version": "1.10.3"
     },
-    "com.mimylab.fukuroudon": {
-      "version": "3.8.0",
-      "dependencies": {
-        "com.vrchat.worlds": "^3.8.2"
-      }
-    },
     "com.vrchat.worlds": {
       "version": "3.8.2",
       "dependencies": {
@@ -33,6 +30,12 @@
     "com.vrchat.base": {
       "version": "3.8.2",
       "dependencies": {}
+    },
+    "com.mimylab.fukuroudon": {
+      "version": "3.8.0",
+      "dependencies": {
+        "com.vrchat.worlds": "^3.8.2"
+      }
     }
   }
 }
