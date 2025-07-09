@@ -17,7 +17,7 @@ public class FollowPlayerOnHead : UdonSharpBehaviour
     {
         if (lookAtPlayer)
         {
-            Vector3 directionToPlayer = Networking.LocalPlayer.GetPosition() - transform.position;
+            Vector3 directionToPlayer = transform.position - Networking.LocalPlayer.GetPosition();
             directionToPlayer.y = 0;
 
             if (directionToPlayer != Vector3.zero)
