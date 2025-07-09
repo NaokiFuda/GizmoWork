@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< .merge_file_a1Lazx
+guid: c1f2fec7bf8e4df4d88f5fe16b19f99f
+=======
 guid: 6a282770f4f80074d8254e6818318292
+>>>>>>> .merge_file_4EsWlf
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
