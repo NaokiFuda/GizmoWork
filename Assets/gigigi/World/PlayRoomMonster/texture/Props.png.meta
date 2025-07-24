@@ -3,7 +3,7 @@ guid: 587e52fede559204bb3eef29c5acf311
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 13
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -181,7 +181,7 @@ TextureImporter:
         width: 950
         height: 110
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -189,6 +189,69 @@ TextureImporter:
       bones: []
       spriteID: 39a50c9065d630a4e8d2d81005a65abe
       internalID: 307939351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Me
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1751
+        width: 138
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a42e5d2486e08a47b25cb7f9bde1ac2
+      internalID: 849799849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vs
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 1752
+        width: 128
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee24858c30631ad4388a142bb05feb03
+      internalID: 1125764577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Peeklings
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 1744
+        width: 499
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86ad84c8b2980024fbc44dcbcec5d9ac
+      internalID: 347188532
       vertices: []
       indices: 
       edges: []
@@ -205,9 +268,12 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Exit: 1225716632
+      Me: 849799849
       Menu: -2000071554
+      Peeklings: 347188532
       Play: -2021154642
       Title: 307939351
+      vs: 1125764577
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
