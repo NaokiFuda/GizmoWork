@@ -9,47 +9,21 @@ namespace PlayRoomMonster
     [UdonBehaviourSyncMode(BehaviourSyncMode.Manual)]
     public class PlayerSelect : UdonSharpBehaviour
     {
-        [UdonSynced] int mePlayer = -1;
-        [UdonSynced] int[] peeksPlayers;
-        int[] _bufferList;
-        int _peeksPlayerNum = -1;
+        [UdonSynced, FieldChangeCallback(nameof(MePlayer))] int mePlayer = -1;
 
-        public override void OnPlayerJoined(VRCPlayerApi player)
+        public int MePlayer
         {
-            _peeksPlayerNum++;
+            set { mePlayer = value;  SetPlayers(); } 
         }
-        public override void OnPlayerLeft(VRCPlayerApi player)
-        {
-            _peeksPlayerNum--;
-        }
+        int[] _bufferList;
+
         public void AddPlayerToMe(VRCPlayerApi player)
         {
-            mePlayer = player.playerId;
-        }
-        public void AddPlayerToPeeklings(int playerID)
-        {
-            foreach (int i in peeksPlayers) if (i == playerID) return;
-            _bufferList = peeksPlayers;
-            peeksPlayers = new int[_peeksPlayerNum-1];
-            for (int i = 0; i < peeksPlayers.Length; i++) peeksPlayers[i] = -1;
-            foreach(int id in _bufferList)
+            if (!Networking.IsOwner(Networking.LocalPlayer, this.gameObject))
             {
-                for(int i = 0; i < peeksPlayers.Length;i++)
-                {
-                    if (id == -1)
-                    {
-                        peeksPlayers[i] = playerID;
-                        break;
-                    }
-                    else if(peeksPlayers[i] != id)
-                    {
-                        peeksPlayers[i] = id;
-                        break;
-                    }
-                }
-                    
-                       
+                Networking.SetOwner(Networking.LocalPlayer, this.gameObject);
             }
+            mePlayer = player.playerId;
         }
         public void StartGame()
         {
@@ -58,13 +32,13 @@ namespace PlayRoomMonster
         }
         public void RequestOwner()
         {
-            if (mePlayer == -1) mePlayer = Random.Range(0, VRCPlayerApi.AllPlayers.Count - 1);
-            for (int i = 0; i < _peeksPlayerNum; i++) if (i != mePlayer) AddPlayerToPeeklings(i);
-            SendCustomNetworkEvent(VRC.Udon.Common.Interfaces.NetworkEventTarget.All, "SetPlayers");
+            if (mePlayer == -1) mePlayer = Random.Range(0, VRCPlayerApi.GetPlayerCount()- 1);
+            RequestSerialization();
+            SetPlayers();
         }
         public void SetPlayers()
         {
-
+            Debug.Log("test");
         }
     }
 }
