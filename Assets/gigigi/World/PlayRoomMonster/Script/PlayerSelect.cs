@@ -10,7 +10,13 @@ namespace PlayRoomMonster
     public class PlayerSelect : UdonSharpBehaviour
     {
         [UdonSynced, FieldChangeCallback(nameof(MePlayer))] int mePlayer = -1;
+        [SerializeField]GiGiWorldSettings worldSettings;
+        float _defSize = 1;
 
+        private void Start()
+        {
+
+        }
         public int MePlayer
         {
             set { mePlayer = value;  SetPlayers(); } 
@@ -34,11 +40,20 @@ namespace PlayRoomMonster
         {
             if (mePlayer == -1) mePlayer = Random.Range(0, VRCPlayerApi.GetPlayerCount()- 1);
             RequestSerialization();
-            SetPlayers();
+            if (Networking.LocalPlayer.playerId == mePlayer)
+            {
+                SetPlayers();
+            }
+            else
+            {
+                SetPlayers();
+            }
+            
         }
         public void SetPlayers()
         {
-            Debug.Log("test");
+            //SetAvatarEyeHeightByMultiplier
         }
+
     }
 }
