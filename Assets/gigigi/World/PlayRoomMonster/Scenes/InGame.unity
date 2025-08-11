@@ -11210,6 +11210,7 @@ MonoBehaviour:
   gameUI: {fileID: 1810294340}
   playerHand: {fileID: 691236636}
   peeklingSize: 0.01
+  debugPeekling: 0
 --- !u!4 &2116514518
 Transform:
   m_ObjectHideFlags: 0

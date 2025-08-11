@@ -15,7 +15,8 @@ namespace PlayRoomMonster
         [SerializeField] GameObject gameUI;
         [SerializeField] Transform playerHand;
         [SerializeField] float peeklingSize = 0.01f;
-        float _defSize = 1;
+         float _defSize = 1;
+        [SerializeField] bool debugPeekling;
         Collider[] handsCollider;
         Transform[] handsTransform;
 
@@ -78,7 +79,7 @@ namespace PlayRoomMonster
         }
         public void RequestOwner()
         {
-            if (mePlayer == -1) mePlayer = Random.Range(1, VRCPlayerApi.GetPlayerCount());
+            if (mePlayer == -1 && !debugPeekling) mePlayer = Random.Range(1, VRCPlayerApi.GetPlayerCount());
             RequestSerialization();
             SetPlayers();
 
