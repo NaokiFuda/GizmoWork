@@ -11,13 +11,22 @@ namespace PlayRoomMonster
         [SerializeField] PeeklingActions action;
         public void OrTriggerEnter(Collider other)
         {
-            if(action.isMe|| other.gameObject.layer == 29)
-                action.SetAction(other);
+            if(action.IsPeekling && other.gameObject.layer == 29)
+                action.SetAction(other, transform.position);
         }
         public void OnTriggerExit(Collider other)
         {
-            if (action.isMe || other.gameObject.layer == 29)
-                action.SetAction(null);
+            if (action.IsPeekling && other.gameObject.layer == 29)
+                action.SetAction(null, transform.position);
+        }
+        public void OnTriggerStay(Collider other)
+        {
+            if (action.IsPeekling && other.gameObject.layer == 29)
+                action.AddPower(transform.position);
+        }
+        private void Update()
+        {
+            
         }
     }
 }
