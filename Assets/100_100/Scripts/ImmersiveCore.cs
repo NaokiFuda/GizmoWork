@@ -61,7 +61,6 @@ public class ImmersiveCore : UdonSharpBehaviour
                 }
             }
         }
-        theButton = gameStartSwitch.GetComponent<SetPlayerButton>();
         theButton.immersiveCore = this;
         theButton.headFollower = textSender.transform;
         theButton.syncObj = gmName;

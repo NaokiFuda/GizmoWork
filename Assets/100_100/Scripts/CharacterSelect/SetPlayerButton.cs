@@ -12,7 +12,8 @@ public class SetPlayerButton : UdonSharpBehaviour
     [HideInInspector] public Transform headFollower;
     public override void Interact()
     {
-        immersiveCore.AssignPlayer(Networking.LocalPlayer, playerID);
+        var player = Networking.LocalPlayer;
+        immersiveCore.AssignPlayer(player, playerID);
         if (headFollower.childCount != 0) headFollower.GetChild(0).parent = null;
         syncObj.parent = headFollower;
         syncObj.localPosition = Vector3.up * 0.3f;
