@@ -85,7 +85,7 @@ namespace PlayRoomMonster
         {
             SetUI(false);
             bool isMe = Networking.LocalPlayer.playerId == mePlayer;
-            peeklingAction.isMe = isMe;
+            peeklingAction.IsPeekling = !isMe;
             meAction.isMe = isMe;
             if (isMe)
             {
@@ -123,6 +123,11 @@ namespace PlayRoomMonster
             player.SetStrafeSpeed(worldSettings.runSpeed * amount);
 
 
+        }
+        public void SetPlayersGravity(VRCPlayerApi player, bool isMe)
+        {
+            if(isMe) player.SetGravityStrength(worldSettings.gravity * humanSize);
+            else player.SetGravityStrength(worldSettings.gravity * _defSize);
         }
         public void SetUI(bool isIngame)
         {
