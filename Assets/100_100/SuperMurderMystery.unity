@@ -1227,12 +1227,12 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   _udonSharpBackingUdonBehaviour: {fileID: 571687857}
-  gameTitle: "\u7A74"
-  playersName:
+  gameTitle: "\u7D61\u307E\u3063\u305F\u7A74"
+  charactersName:
   - "\u843D\u5922"
+  - "\u6CBC\u843D"
   - "\u732B\u843D"
-  - "\u72C2\u843D"
-  - "\u843D\u4ED8"
+  - "\u843D\u7740"
   textSender: {fileID: 763261924}
   plSelectPrefab: {fileID: 718669891724471452, guid: 4b07033445d0ded49a2c3bb49246d589,
     type: 3}

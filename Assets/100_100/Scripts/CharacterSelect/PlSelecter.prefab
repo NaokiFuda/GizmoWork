@@ -131,7 +131,7 @@ MonoBehaviour:
     SerializationNodes: []
   _udonSharpBackingUdonBehaviour: {fileID: 8977176140786247987}
   immersiveCore: {fileID: 0}
-  playerID: -1
+  characterID: -1
   syncObj: {fileID: 0}
   headFollower: {fileID: 0}
 --- !u!114 &8977176140786247987

@@ -31,6 +31,7 @@ public class DisplayText : UdonSharpBehaviour
         playerHead = Networking.LocalPlayer.GetTrackingData(VRCPlayerApi.TrackingDataType.Head);
         transform.rotation = playerHead.rotation;
         transform.position = playerHead.position;
+        transform.GetChild(0).rotation = new Quaternion(0, playerHead.rotation.y, 0, playerHead.rotation.w);
         playerRay = new Ray(playerHead.position, transform.forward);
         Debug.DrawRay(playerHead.position, transform.forward * 1, Color.blue);
     }

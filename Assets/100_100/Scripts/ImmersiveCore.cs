@@ -9,9 +9,9 @@ using VRC.Udon.Common.Interfaces;
 public class ImmersiveCore : UdonSharpBehaviour
 {
     [SerializeField] protected string gameTitle;
-    [SerializeField] protected string[] playersName;
-    public string[] GetPlayersName {  get => playersName;  }
-    GameObject[] _plSelectObj;
+    [SerializeField] protected string[] charactersName;
+    public string[] GetCharactersName {  get => charactersName;  }
+    
     [SerializeField] DisplayText textSender;
     public DisplayText GetDisplayText { get => textSender; }
     [SerializeField] GameObject plSelectPrefab;
@@ -21,8 +21,9 @@ public class ImmersiveCore : UdonSharpBehaviour
     TextMeshPro _textPro;
     protected bool _gameMaster;
     protected bool _spectator;
+    
 
-    VRCPlayerApi[] players;
+    VRCPlayerApi[] selectPlayerList = new VRCPlayerApi[20];
 
     private void Awake()
     {
@@ -30,39 +31,36 @@ public class ImmersiveCore : UdonSharpBehaviour
     }
     public void Initialize()
     {
-        _plSelectObj = new GameObject[playersName.Length];
-        players = new VRCPlayerApi[playersName.Length+1];
+        GameObject[] _plSelectObj = new GameObject[charactersName.Length];
+
         int gmNum = 0;
         SetPlayerButton theButton = null;
-        for (int i = 0; i < playersName.Length; i++)
+        for (int i = 0; i < charactersName.Length; i++)
         {
-            _plSelectObj[i] = Instantiate(plSelectPrefab, transform.position + Vector3.up * 1.4f + Vector3.left * (playersName.Length / 2 - i), transform.rotation);
+            _plSelectObj[i] = Instantiate(plSelectPrefab, transform.position + Vector3.up * 1.4f + Vector3.left * (charactersName.Length / 2 - i), transform.rotation);
             theButton = _plSelectObj[i].GetComponent<SetPlayerButton>();
 
             theButton.immersiveCore = this;
-            theButton.playerID = i;
-            theButton.headFollower = textSender.transform;
+            theButton.characterID = i;
+            theButton.headFollower = textSender.transform.GetChild(0);
 
-            if (i > 0)
+            var t = _plSelectObj[i].transform.GetChild(0);
+            _textPro = t.GetComponent<TextMeshPro>();
+            if (_textPro != null) _textPro.text = charactersName[i];
+            for (int j = 0; j < SyncObjFolder.childCount; j++)
             {
-                var t = _plSelectObj[i].transform.GetChild(0);
-                _textPro = t.GetComponent<TextMeshPro>();
-                if (_textPro != null) _textPro.text = playersName[i];
-                for (int j = 0; j < SyncObjFolder.childCount; j++)
+                Transform c = SyncObjFolder.GetChild(j);
+                if (c.childCount == 0)
                 {
-                    Transform c = SyncObjFolder.GetChild(j);
-                    if (c.childCount == 0)
-                    {
-                        theButton.syncObj = c;
-                        t.parent = c;
-                        gmNum = j + 1;
-                        break;
-                    }
+                    theButton.syncObj = c;
+                    t.parent = c;
+                    gmNum = j + 1;
+                    break;
                 }
             }
         }
         theButton.immersiveCore = this;
-        theButton.headFollower = textSender.transform;
+        theButton.headFollower = textSender.transform.GetChild(0);
         theButton.syncObj = gmName;
     }
 
@@ -70,12 +68,15 @@ public class ImmersiveCore : UdonSharpBehaviour
     {
         if (id < 0)
         {
-            players[players.Length-1] = player;
+            selectPlayerList[charactersName.Length] = player; //GM
             SendCustomNetworkEvent(NetworkEventTarget.All, "StartGame");
         }
-        else players[id] = player;
+        else {
+            selectPlayerList[id] = player;
+        }
 
     }
+
     public void StartGame()
     {
 
